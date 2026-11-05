@@ -1,0 +1,1150 @@
+{
+  "version": 2,
+  "notice": "公开官网监控来源；采集结果需人工核验后发布。",
+  "sources": [
+    {
+      "id": "source-v-cairo-ict-2026",
+      "name": "开罗国际通信与信息技术展",
+      "nameEn": "Cairo ICT 2026",
+      "url": "https://cairoict.com/",
+      "region": "africa",
+      "topics": [
+        "telecom",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-ftt-fintech-festival-2026",
+      "name": "伦敦FTT金融科技节",
+      "nameEn": "FTT Fintech Festival 2026",
+      "url": "https://www.fintechtalents.com/events/europe/festival-london/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-africa-fintech-banking-2026",
+      "name": "非洲金融科技与银行峰会",
+      "nameEn": "Africa Fintech and Banking Summit 2026",
+      "url": "https://www.finasa.org.za/event-details/africa-fintech-and-banking-summit",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-bfsi-kenya-2026",
+      "name": "肯尼亚银行金融科技创新峰会",
+      "nameEn": "BFSI Innovation & Technology Summit Kenya 2026",
+      "url": "https://bfsiitsummit.com/kenya/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-empack-madrid-2026",
+      "name": "西班牙Empack马德里包装展",
+      "nameEn": "Empack Madrid 2026",
+      "url": "https://www.empackmadrid.com/es/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-stp-summit-2026",
+      "name": "墨西哥数字支付峰会",
+      "nameEn": "STP Summit 2026",
+      "url": "https://stpsummit.mx/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-solana-breakpoint-2026",
+      "name": "Solana Breakpoint区块链大会",
+      "nameEn": "Solana Breakpoint 2026",
+      "url": "https://solana.com/uk/news/breakpoint-2026-london-speakers",
+      "region": "europe",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-live-africa-tech-2026",
+      "name": "非洲科技节",
+      "nameEn": "Africa Tech Festival 2026",
+      "url": "https://africatechfestival.com/faqs/",
+      "region": "africa",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-live-sff-2026",
+      "name": "新加坡金融科技节",
+      "nameEn": "Singapore FinTech Festival 2026",
+      "url": "https://www.fintechfestival.sg/festival-overview",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-tacfis-2026",
+      "name": "非洲网络安全与金融科技创新峰会",
+      "nameEn": "The Africa Cyber & Fintech Innovation Summit 2026 — TACFIS",
+      "url": "https://cyberfintech.africa/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-the-point-payments-nz-2026",
+      "name": "新西兰支付行业大会",
+      "nameEn": "The Point 2026 — Payments NZ",
+      "url": "https://thepoint2026.paymentsnz.co.nz/",
+      "region": "oceania",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-papss-cowry-2026",
+      "name": "非洲PAPSS COWRY支付大会",
+      "nameEn": "PAPSS COWRY 2026",
+      "url": "https://papsscowry2026.afreximbankevents.com/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-hsp-asia-2026",
+      "name": "亚洲高安全印刷大会",
+      "nameEn": "High Security Printing Asia 2026",
+      "url": "https://hsp-asia.com/",
+      "region": "asia",
+      "topics": [
+        "identity",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-fintech-connect-2026",
+      "name": "英国金融科技连接大会",
+      "nameEn": "FinTech Connect 2026",
+      "url": "https://www.fintechconnect.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-trustech-2026",
+      "name": "法国支付与身份识别技术展",
+      "nameEn": "TRUSTECH 2026",
+      "url": "https://www.trustech-event.com/en/practical-information/visitor-faq",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-adfw-2026",
+      "name": "阿布扎比金融周",
+      "nameEn": "Abu Dhabi Finance Week 2026",
+      "url": "https://www.adfw.com/event/2026/tickets",
+      "region": "asia",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-ptc-honolulu-2027",
+      "name": "太平洋电信理事会年会",
+      "nameEn": "PTC’27",
+      "url": "https://www.ptc.org/ptc27/",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-odds-2027",
+      "name": "光学与数字证件安全大会",
+      "nameEn": "Optical & Digital Document Security 2027",
+      "url": "https://opticaldigitalsecurity.com/",
+      "region": "europe",
+      "topics": [
+        "identity",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-asian-financial-forum-2027",
+      "name": "亚洲金融论坛",
+      "nameEn": "Asian Financial Forum 2027",
+      "url": "https://asianfinancialforum.hktdc.com/conference/aff/en/about-aff",
+      "region": "asia",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-empack-switzerland-2027",
+      "name": "瑞士Empack包装展",
+      "nameEn": "Empack Switzerland 2027",
+      "url": "https://www.empack-schweiz.ch/en/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-fintech-islands-2027",
+      "name": "加勒比金融科技群岛峰会",
+      "nameEn": "FinTech Islands 2027",
+      "url": "https://www.fintechislands.com/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-pharmapack-europe-2027",
+      "name": "欧洲医药包装与给药技术展",
+      "nameEn": "Pharmapack Europe 2027",
+      "url": "https://www.pharmapackeurope.com/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-digital-assets-forum-london-2027",
+      "name": "伦敦数字资产论坛",
+      "nameEn": "Digital Assets Forum London 2027",
+      "url": "https://eblockchainconvention.com/digital-assets-forum/",
+      "region": "europe",
+      "topics": [
+        "digital-currency",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-paris-packaging-week-2027",
+      "name": "巴黎包装周",
+      "nameEn": "Paris Packaging Week 2027",
+      "url": "https://www.parispackagingweek.com/en/find-out-more/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-metro-connect-usa-2027",
+      "name": "美国数字连接基础设施大会",
+      "nameEn": "Metro Connect USA 2027",
+      "url": "https://metro-connect-usa.com/venue-travel/attendee-faqs",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-itexpo-2027",
+      "name": "美国企业通信与信息技术展",
+      "nameEn": "ITEXPO 2027",
+      "url": "https://www.itexpo.com/east/exp.aspx",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-ats-nairobi-2027",
+      "name": "非洲科技峰会·内罗毕",
+      "nameEn": "Africa Tech Summit Nairobi 2027",
+      "url": "https://www.africatechsummit.com/nairobi/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-bharat-fintech-summit-2027",
+      "name": "印度Bharat金融科技峰会",
+      "nameEn": "Bharat Fintech Summit 2027",
+      "url": "https://bharatfintechsummit.com/",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-commsday-regional-policy-2027",
+      "name": "澳大利亚电信区域与政策论坛",
+      "nameEn": "CommsDay Regional & Policy Forum 2027",
+      "url": "https://www.commsday.com/",
+      "region": "oceania",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-empack-dortmund-2027",
+      "name": "德国Empack多特蒙德包装展",
+      "nameEn": "Empack Dortmund 2027",
+      "url": "https://www.empack-messen.de/besucher-dortmund/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-live-packaging-birmingham-2027",
+      "name": "英国包装创新与包装技术展",
+      "nameEn": "Packaging Innovations & Empack 2027",
+      "url": "https://www.packagingbirmingham.com/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-propak-philippines-2027",
+      "name": "菲律宾国际加工与包装展",
+      "nameEn": "ProPak Philippines 2027",
+      "url": "https://en.propakchina.com/",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-black-swan-india-2027",
+      "name": "印度黑天鹅峰会",
+      "nameEn": "Black Swan Summit India 2027",
+      "url": "https://india.blackswansummit.com/faqs",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-hsp-emea-2027",
+      "name": "欧洲中东非洲高安全印刷大会",
+      "nameEn": "High Security Printing EMEA 2027",
+      "url": "https://hsp-emea.com/",
+      "region": "europe",
+      "topics": [
+        "identity",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-live-mwc-barcelona-2027",
+      "name": "巴塞罗那世界移动通信大会",
+      "nameEn": "MWC Barcelona 2027",
+      "url": "https://www.mwcbarcelona.com/",
+      "region": "europe",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-moneylive-summit-2027",
+      "name": "MoneyLIVE银行与支付峰会",
+      "nameEn": "MoneyLIVE Summit 2027",
+      "url": "https://moneylive-insights.com/events/summit/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-propak-east-africa-2027",
+      "name": "东非包装与加工技术展",
+      "nameEn": "Propak East Africa 2027",
+      "url": "https://www.propakeastafrica.com/visiting",
+      "region": "africa",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-sino-pack-2027",
+      "name": "中国国际包装工业展览会",
+      "nameEn": "Sino-Pack 2027",
+      "url": "https://www.chinasinopack.com/GPAC/information/ShowHighlight/eng",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-andina-link-2027",
+      "name": "哥伦比亚Andina Link通信展",
+      "nameEn": "Andina Link Expo 2027",
+      "url": "https://latinexpo.andinalink.com/",
+      "region": "south-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-capacity-latam-2027",
+      "name": "拉美数字连接与电信大会",
+      "nameEn": "Capacity LATAM 2027",
+      "url": "https://www.capacitylatam.com/",
+      "region": "south-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-mpe-2027",
+      "name": "欧洲商户支付生态大会",
+      "nameEn": "Merchant Payments Ecosystem (MPE) 2027",
+      "url": "https://www.merchantpaymentsecosystem.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-propak-vietnam-2027",
+      "name": "越南国际加工与包装展",
+      "nameEn": "ProPak Vietnam 2027",
+      "url": "https://www.propakvietnam.com/thong-tin-chung-copy-en/",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-appex-2027",
+      "name": "澳大利亚加工与包装展",
+      "nameEn": "APPEX 2027 — Australasian Processing & Packaging Expo",
+      "url": "https://www.appex.com.au/faqs",
+      "region": "oceania",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-live-fintech-americas-2027",
+      "name": "美洲金融科技大会",
+      "nameEn": "Fintech Americas Miami 2027",
+      "url": "https://www.fintechamericas.co/en/attend",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-fibre-horizons-2027",
+      "name": "欧洲光纤与连接大会",
+      "nameEn": "Fibre Horizons 2027",
+      "url": "https://fibrehorizons.eu/",
+      "region": "europe",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-supago-summit-2027",
+      "name": "阿根廷Supago数字支付峰会",
+      "nameEn": "Supago Summit 2027",
+      "url": "https://supago.ai/es/conferencia",
+      "region": "south-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-afr-banking-summit-2027",
+      "name": "澳大利亚金融评论银行峰会",
+      "nameEn": "Financial Review Banking Summit 2027",
+      "url": "https://live.afr.com/bankingsummit/",
+      "region": "oceania",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-afripack-tanzania-2027",
+      "name": "坦桑尼亚包装技术展",
+      "nameEn": "AFRIPACK Expo Tanzania 2027",
+      "url": "https://www.afripackexpo.com/",
+      "region": "africa",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-open-finance-connect-chile-2027",
+      "name": "智利开放金融连接大会",
+      "nameEn": "Open Finance Connect Chile 2027",
+      "url": "https://openfinanceconnect.cl/",
+      "region": "south-america",
+      "topics": [
+        "fintech",
+        "banking",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-aibc-americas-2027",
+      "name": "美洲AIBC金融科技与人工智能展",
+      "nameEn": "AIBC Americas 2027",
+      "url": "https://aibc.world/americas/",
+      "region": "south-america",
+      "topics": [
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-taxstamp-2027",
+      "name": "税票与追溯技术论坛",
+      "nameEn": "Tax Stamp & Traceability Forum 2027",
+      "url": "https://taxstamptraceabilityforum.com/",
+      "region": "europe",
+      "topics": [
+        "identity",
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-crypto-assets-conference-2027",
+      "name": "法兰克福加密资产大会",
+      "nameEn": "Crypto Assets Conference (CAC27)",
+      "url": "https://crypto-assets-conference.de/",
+      "region": "europe",
+      "topics": [
+        "digital-currency",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-nacha-payments-2027",
+      "name": "美国智慧快捷支付大会",
+      "nameEn": "Smarter Faster Payments 2027",
+      "url": "https://payments.nacha.org/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-pack-expo-southeast-2027",
+      "name": "美国东南部包装与加工展",
+      "nameEn": "PACK EXPO Southeast 2027",
+      "url": "https://www.packexposoutheast.com/",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-warsaw-pack-2027",
+      "name": "华沙包装技术与设备展",
+      "nameEn": "Warsaw Pack 2027",
+      "url": "https://warsawpack.pl/en/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-empack-netherlands-2027",
+      "name": "荷兰Empack包装展",
+      "nameEn": "Empack Netherlands 2027",
+      "url": "https://www.empack.nl/en/home-visitors/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-global-digital-banking-summit-2027",
+      "name": "全球数字银行峰会",
+      "nameEn": "Global Digital Banking Summit 2027",
+      "url": "https://digitalbanking.events/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-pay360-2027",
+      "name": "英国PAY360支付展会",
+      "nameEn": "PAY360 2027",
+      "url": "https://pay360event.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-token2049-dubai-2027",
+      "name": "迪拜数字资产大会",
+      "nameEn": "TOKEN2049 Dubai 2027",
+      "url": "https://www.token2049.com/dubai/announcement",
+      "region": "asia",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-gitex-africa-2027",
+      "name": "非洲GITEX科技展",
+      "nameEn": "GITEX AFRICA 2027",
+      "url": "https://gitexafrica.com/",
+      "region": "africa",
+      "topics": [
+        "telecom",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-money2020-asia-2027",
+      "name": "亚洲金融科技与支付大会",
+      "nameEn": "Money20/20 Asia 2027",
+      "url": "https://asia.money2020.com/attend/plan-your-trip",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-printpack-alger-2027",
+      "name": "阿尔及利亚印刷与包装展",
+      "nameEn": "printpack alger 2027",
+      "url": "https://www.interpackalliance.com/en/Events/printpack_alger",
+      "region": "africa",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-empack-porto-2027",
+      "name": "葡萄牙Empack包装与物流自动化展",
+      "nameEn": "Empack and Logistics & Automation Porto 2027",
+      "url": "https://www.empacklogisticsautomationporto.com/pt-pt/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-finovate-spring-2027",
+      "name": "美国春季金融科技创新大会",
+      "nameEn": "FinovateSpring 2027",
+      "url": "https://finovate.com/finovatespring-2027-is-live-new-venue-same-finovate-experience/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-consensus-miami-2027",
+      "name": "迈阿密数字资产与区块链共识大会",
+      "nameEn": "Consensus Miami 2027",
+      "url": "https://consensus.coindesk.com/faq/",
+      "region": "north-america",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-dmfs-africa-2027",
+      "name": "非洲数字金融基础设施论坛",
+      "nameEn": "DMFS Africa Forum 2027",
+      "url": "https://dmfsafrica.com/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-mrc-sao-paulo-2027",
+      "name": "巴西MRC支付与反欺诈大会",
+      "nameEn": "MRC São Paulo 2027",
+      "url": "https://merchantriskcouncil.org/events/2027/mrc-sao-paulo-2027",
+      "region": "south-america",
+      "topics": [
+        "fintech",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-atxenterprise-2027",
+      "name": "新加坡亚洲科技展（电信与连接板块）",
+      "nameEn": "ATxEnterprise 2027 — Asia Tech x Singapore",
+      "url": "https://asiatechxsg.com/faqs/",
+      "region": "asia",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-anga-com-2027",
+      "name": "德国宽带媒体与连接展",
+      "nameEn": "ANGA COM 2027",
+      "url": "https://angacom.de/startseite",
+      "region": "europe",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-empack-hamburg-2027",
+      "name": "德国Empack汉堡包装展",
+      "nameEn": "Empack Hamburg 2027",
+      "url": "https://www.empack-messen.de/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-propak-mena-2027",
+      "name": "中东北非包装与加工展",
+      "nameEn": "ProPak MENA 2027",
+      "url": "https://www.propakmena.com/",
+      "region": "africa",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-expo-pack-guadalajara-2027",
+      "name": "墨西哥瓜达拉哈拉包装与加工展",
+      "nameEn": "EXPO PACK Guadalajara 2027",
+      "url": "https://www.expopackguadalajara.com.mx/the-show/faqs",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-money2020-europe-2027",
+      "name": "Money20/20欧洲金融科技大会",
+      "nameEn": "Money20/20 Europe 2027",
+      "url": "https://europe.money2020.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-africa-payments-stablecoin-2027",
+      "name": "非洲支付与稳定币峰会",
+      "nameEn": "Africa Payments & Stablecoin Summit 2027",
+      "url": "https://summit.afristablecoin.org/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-propak-asia-2027",
+      "name": "亚洲国际加工与包装展",
+      "nameEn": "ProPak Asia 2027",
+      "url": "https://www.propakasia.com/ppka/2026/en/press_dt.asp?id=1047",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    },
+    {
+      "id": "source-v-brasil-finance-summit-2027",
+      "name": "巴西金融、金融科技与税务峰会",
+      "nameEn": "Brasil Finance, Fintech & Tax Summit 2027",
+      "url": "https://brasilfinancesummit.com/",
+      "region": "south-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-ebaday-2027",
+      "name": "欧洲支付与交易银行大会",
+      "nameEn": "EBAday 2027",
+      "url": "https://2026.ebaday.com/about-ebaday",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-id4africa-2027",
+      "name": "非洲数字身份年会暨展览",
+      "nameEn": "ID4Africa AGM & Exposition 2027",
+      "url": "https://id4africaevents.com/",
+      "region": "africa",
+      "topics": [
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-identity-week-europe-2027",
+      "name": "欧洲身份识别技术周",
+      "nameEn": "Identity Week Europe 2027",
+      "url": "https://www.terrapinn.com/exhibition/identity-week/",
+      "region": "europe",
+      "topics": [
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-fispal-tecnologia-2027",
+      "name": "巴西食品加工与包装技术展",
+      "nameEn": "Fispal Tecnologia 2027",
+      "url": "https://www.fispaltecnologia.com.br/",
+      "region": "south-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-africa-payments-regtech-2027",
+      "name": "非洲支付与监管科技论坛",
+      "nameEn": "Africa Payments & RegTech Forum 2027",
+      "url": "https://www.qubevents.com/africa-payments",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-fintech-summit-africa-2027",
+      "name": "非洲金融科技峰会",
+      "nameEn": "FinTech Summit Africa 2027",
+      "url": "https://fintechsummit.co.za/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency",
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-05"
+    },
+    {
+      "id": "source-v-allforpack-2027",
+      "name": "法国ALLFORPACK包装展",
+      "nameEn": "ALLFORPACK EMBALLAGE PARIS 2027",
+      "url": "https://www.all-for-pack.com/-/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-04"
+    }
+  ]
+}
