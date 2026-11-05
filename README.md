@@ -8,7 +8,7 @@
 
 ## 官网候选监测
 
-`collector.py` 按 `sources.json` 中已配置的官方网站读取公开的结构化 Event 数据。GitHub Actions 配置为每天运行，候选和状态作为工作流 artifact 保存，需人工核验后才更新网站；它不是全网搜索，也不会自动改写已发布展会或确认参会资格。
+`collector.py` 按 `sources.json` 中已配置的官方网站读取公开的结构化 Event 数据。定时工作流尚未启用；如经授权启用，候选和状态将作为工作流 artifact 保存，需人工核验后才更新网站；它不是全网搜索，也不会自动改写已发布展会或确认参会资格。
 
 本地校验：`python3 -m unittest test_collector`；`python3 collector.py --config sources.json --dry-run`。核验后更新网站请编辑源码包的正式 JSON、重新构建，再更新仓库中的 `index.html` 及清单快照。
 
