@@ -122,9 +122,9 @@
       "url": "https://www.fintechfestival.sg/festival-overview",
       "region": "asia",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -137,8 +137,8 @@
       "url": "https://cyberfintech.africa/",
       "region": "africa",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -151,8 +151,8 @@
       "url": "https://thepoint2026.paymentsnz.co.nz/",
       "region": "oceania",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -165,8 +165,8 @@
       "url": "https://papsscowry2026.afreximbankevents.com/",
       "region": "africa",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -179,8 +179,8 @@
       "url": "https://hsp-asia.com/",
       "region": "asia",
       "topics": [
-        "identity",
-        "banking"
+        "banking",
+        "identity"
       ],
       "official": true,
       "enabled": true,
@@ -193,9 +193,9 @@
       "url": "https://www.fintechconnect.com/",
       "region": "europe",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -208,8 +208,8 @@
       "url": "https://www.trustech-event.com/en/practical-information/visitor-faq",
       "region": "europe",
       "topics": [
-        "fintech",
         "banking",
+        "fintech",
         "identity"
       ],
       "official": true,
@@ -250,8 +250,8 @@
       "url": "https://opticaldigitalsecurity.com/",
       "region": "europe",
       "topics": [
-        "identity",
-        "fintech"
+        "fintech",
+        "identity"
       ],
       "official": true,
       "enabled": true,
@@ -291,8 +291,8 @@
       "url": "https://www.fintechislands.com/",
       "region": "north-america",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -318,9 +318,9 @@
       "url": "https://eblockchainconvention.com/digital-assets-forum/",
       "region": "europe",
       "topics": [
+        "banking",
         "digital-currency",
-        "fintech",
-        "banking"
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -372,8 +372,8 @@
       "url": "https://www.africatechsummit.com/nairobi/",
       "region": "africa",
       "topics": [
-        "fintech",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -386,8 +386,8 @@
       "url": "https://bharatfintechsummit.com/",
       "region": "asia",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -452,8 +452,8 @@
       "url": "https://india.blackswansummit.com/faqs",
       "region": "asia",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -466,8 +466,8 @@
       "url": "https://hsp-emea.com/",
       "region": "europe",
       "topics": [
-        "identity",
-        "banking"
+        "banking",
+        "identity"
       ],
       "official": true,
       "enabled": true,
@@ -493,9 +493,9 @@
       "url": "https://moneylive-insights.com/events/summit/",
       "region": "europe",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -560,8 +560,8 @@
       "url": "https://www.merchantpaymentsecosystem.com/",
       "region": "europe",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -600,8 +600,8 @@
       "url": "https://www.fintechamericas.co/en/attend",
       "region": "north-america",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -627,8 +627,8 @@
       "url": "https://supago.ai/es/conferencia",
       "region": "south-america",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -668,8 +668,8 @@
       "url": "https://openfinanceconnect.cl/",
       "region": "south-america",
       "topics": [
-        "fintech",
         "banking",
+        "fintech",
         "identity"
       ],
       "official": true,
@@ -710,9 +710,9 @@
       "url": "https://crypto-assets-conference.de/",
       "region": "europe",
       "topics": [
+        "banking",
         "digital-currency",
-        "fintech",
-        "banking"
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -725,8 +725,8 @@
       "url": "https://payments.nacha.org/",
       "region": "north-america",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -778,8 +778,8 @@
       "url": "https://digitalbanking.events/",
       "region": "europe",
       "topics": [
-        "fintech",
         "banking",
+        "fintech",
         "identity"
       ],
       "official": true,
@@ -793,8 +793,8 @@
       "url": "https://pay360event.com/",
       "region": "europe",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -821,9 +821,9 @@
       "url": "https://gitexafrica.com/",
       "region": "africa",
       "topics": [
-        "telecom",
+        "banking",
         "fintech",
-        "banking"
+        "telecom"
       ],
       "official": true,
       "enabled": true,
@@ -836,9 +836,9 @@
       "url": "https://asia.money2020.com/attend/plan-your-trip",
       "region": "asia",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -877,8 +877,8 @@
       "url": "https://finovate.com/finovatespring-2027-is-live-new-venue-same-finovate-experience/",
       "region": "north-america",
       "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -905,8 +905,8 @@
       "url": "https://dmfsafrica.com/",
       "region": "africa",
       "topics": [
-        "fintech",
         "banking",
+        "fintech",
         "identity"
       ],
       "official": true,
@@ -999,9 +999,9 @@
       "url": "https://europe.money2020.com/",
       "region": "europe",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -1014,9 +1014,9 @@
       "url": "https://summit.afristablecoin.org/",
       "region": "africa",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -1042,22 +1042,8 @@
       "url": "https://brasilfinancesummit.com/",
       "region": "south-america",
       "topics": [
-        "fintech",
-        "banking"
-      ],
-      "official": true,
-      "enabled": true,
-      "reviewedAt": "2026-11-05"
-    },
-    {
-      "id": "source-v-ebaday-2027",
-      "name": "欧洲支付与交易银行大会",
-      "nameEn": "EBAday 2027",
-      "url": "https://2026.ebaday.com/about-ebaday",
-      "region": "europe",
-      "topics": [
-        "fintech",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -1109,9 +1095,9 @@
       "url": "https://www.qubevents.com/africa-payments",
       "region": "africa",
       "topics": [
-        "fintech",
         "banking",
-        "digital-currency"
+        "digital-currency",
+        "fintech"
       ],
       "official": true,
       "enabled": true,
@@ -1124,9 +1110,9 @@
       "url": "https://fintechsummit.co.za/",
       "region": "africa",
       "topics": [
-        "fintech",
         "banking",
         "digital-currency",
+        "fintech",
         "identity"
       ],
       "official": true,
@@ -1134,17 +1120,415 @@
       "reviewedAt": "2026-11-05"
     },
     {
-      "id": "source-v-allforpack-2027",
-      "name": "法国ALLFORPACK包装展",
-      "nameEn": "ALLFORPACK EMBALLAGE PARIS 2027",
-      "url": "https://www.all-for-pack.com/-/",
+      "id": "source-nov13-crosstech-world",
+      "name": "CrossTech 全球跨境支付大会",
+      "nameEn": "CrossTech World 2026",
+      "url": "https://crosstechpayments.com/crosstech-world-2026/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-fintech-revolution-india",
+      "name": "印度金融科技革命峰会",
+      "nameEn": "Fintech Revolution Summit India 2026",
+      "url": "https://www.fintechrevolutionseries.com/india/",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-loupe-south-china",
+      "name": "华南标签与包装印刷展",
+      "nameEn": "LOUPE South China 2026",
+      "url": "https://www.loupe-global.com/loupe-mexico",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-banktech-us",
+      "name": "美国银行技术峰会",
+      "nameEn": "U.S. BankTech Summit 2026",
+      "url": "https://usbanktechsummit.com/",
+      "region": "north-america",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-ai-payments-br",
+      "name": "巴西人工智能支付高管论坛",
+      "nameEn": "AI Payments Executive Forum 2026",
+      "url": "https://sistema.corpbusiness.com.br/detalhes_evento.php?id=84",
+      "region": "south-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-gulf-print-pack",
+      "name": "海湾印刷与包装展",
+      "nameEn": "Gulf Print & Pack 2027",
+      "url": "https://www.gulfprintpack.com/",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-ism-manufacturing",
+      "name": "科隆食品及糖果制造技术展",
+      "nameEn": "ISM Manufacturing 2027",
+      "url": "https://www.anugafoodtec.com/trade-fair/anuga-foodtec/anuga-foodtec-worldwide/",
       "region": "europe",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-04"
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-iit-gurugram",
+      "name": "印度国际包装及标签展（古尔冈）",
+      "nameEn": "India International Packaging & Labeling Expo Gurugram 2027",
+      "url": "https://iitexpo.com/event/packaging-expo/",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-drr-africa",
+      "name": "非洲数字风险与反欺诈大会",
+      "nameEn": "DRRAFM Africa Conference 2027",
+      "url": "https://africa.rafmsummit.com/conference",
+      "region": "africa",
+      "topics": [
+        "telecom",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-atmia-us",
+      "name": "美国 ATM 技术大会",
+      "nameEn": "ATMIA US Conference 2027",
+      "url": "https://www.atmia.com/conferences/us/",
+      "region": "north-america",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-payments-magnified",
+      "name": "Payments MAGnified 支付大会",
+      "nameEn": "Payments MAGnified 27",
+      "url": "https://www.merchantadvisorygroup.org/conferences/payments-magnified-27",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-anuga-foodtec",
+      "name": "科隆食品加工及包装技术展",
+      "nameEn": "Anuga FoodTec 2027",
+      "url": "https://www.anugafoodtec.com/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-baft-trade-payments",
+      "name": "BAFT 国际贸易与支付大会",
+      "nameEn": "BAFT International Trade and Payments Conference 2027",
+      "url": "https://baft.org/event/2027-international-trade-and-payments-conference/",
+      "region": "north-america",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-packaging-summit-latam",
+      "name": "拉美包装峰会",
+      "nameEn": "Packaging Summit Latinoamérica 2027",
+      "url": "https://packagingsummitlatinoamerica.com/",
+      "region": "south-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-mrc-vegas",
+      "name": "MRC 拉斯维加斯支付与风控大会",
+      "nameEn": "MRC Vegas 2027",
+      "url": "https://events.merchantriskcouncil.org/event/3cf8711f-7884-4659-89f9-a474425bcb7a/overview",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-plastico-brasil",
+      "name": "巴西塑料加工展",
+      "nameEn": "Plástico Brasil 2027",
+      "url": "https://www.plasticobrasil.com.br/es/",
+      "region": "south-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-global-blockchain-dubai",
+      "name": "迪拜全球区块链大会",
+      "nameEn": "Global Blockchain Congress 2027",
+      "url": "https://www.gbc-uae.com/",
+      "region": "asia",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-fintech-india",
+      "name": "印度金融科技展",
+      "nameEn": "FinTech India Expo 2027",
+      "url": "https://www.fintechindiaexpo.com/contact-us.aspx",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-ipc-us",
+      "name": "美国创新支付大会",
+      "nameEn": "Innovative Payments Conference 2027",
+      "url": "https://www.ipa.org/ipc.html",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-fibe-berlin",
+      "name": "柏林金融科技节",
+      "nameEn": "FIBE Fintech Festival Berlin 2027",
+      "url": "https://www.fibe-berlin.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-unblock-riga",
+      "name": "里加金融科技与区块链大会",
+      "nameEn": "UN:BLOCK 2027",
+      "url": "https://unblockeurope.com/",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-transact",
+      "name": "TRANSACT 支付技术展会",
+      "nameEn": "TRANSACT 2027",
+      "url": "https://transactshow.com/agenda/",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-hispack",
+      "name": "西班牙包装展",
+      "nameEn": "Hispack 2027",
+      "url": "https://www.hispack.com/en/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-pack-show-romania",
+      "name": "罗马尼亚包装展",
+      "nameEn": "Pack Show 2027",
+      "url": "https://euroexpo.ro/en/fairs/pack-show/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-digital-money-summit",
+      "name": "数字货币峰会",
+      "nameEn": "Digital Money Summit 2027",
+      "url": "https://www.omfif.org/dms2027/",
+      "region": "europe",
+      "topics": [
+        "digital-currency",
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-packaging-premiere-milan",
+      "name": "米兰高端包装展",
+      "nameEn": "Packaging Première & PCD Milan 2027",
+      "url": "https://www.packagingpremiere.it/en/register-your-interest/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-bank-it-usa",
+      "name": "美国银行信息技术大会",
+      "nameEn": "Bank IT USA 2027",
+      "url": "https://www.bankitusa.com/",
+      "region": "north-america",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-v-ebaday-2027",
+      "name": "欧洲支付与交易银行大会",
+      "nameEn": "EBAday 2027",
+      "url": "https://www.ebaday.com/faqs",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov13-payments-leaders-miami",
+      "name": "迈阿密支付领导者峰会",
+      "nameEn": "Payments Leaders’ Summit Miami 2027",
+      "url": "https://www.payments-leaderssummit.com/payments-leaders-summit-june",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-v-allforpack-2027",
+      "name": "法国ALLFORPACK包装展",
+      "nameEn": "ALLFORPACK EMBALLAGE PARIS 2027",
+      "url": "https://www.all-for-pack.com/en/news/allforpack-packaging-paris-2027-business-networking-events-paris",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-13"
     }
   ]
 }
