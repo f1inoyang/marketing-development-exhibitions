@@ -3,6 +3,8 @@ from datetime import date, datetime, timezone
 import csv
 import io
 import json
+import shutil
+from tempfile import TemporaryDirectory
 from pathlib import Path
 import unittest
 from zipfile import ZipFile
@@ -156,6 +158,27 @@ class PublicationTests(unittest.TestCase):
         self.run["sourceCount"] = 12
         with self.assertRaises(ValueError):
             self.cycle(self.c)
+
+    def test_replaying_successful_run_retains_original_release_and_audit(self):
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            shutil.copy(refresh.ROOT / "exhibition-source.zip", root)
+            workflow = ".github/workflows/collect.yml"
+            (root / workflow).parent.mkdir(parents=True)
+            shutil.copy(refresh.ROOT / workflow, root / workflow)
+            (root / "sources.json").write_bytes(refresh.json_bytes({"sources": [self.source]}))
+            run_dir = root / "run"
+            run_dir.mkdir()
+            (run_dir / "collection-status.json").write_bytes(refresh.json_bytes(self.run))
+            new = dict(self.c, name="Japan Banking Expo 2027", city="Tokyo", country="JP",
+                       startDate="2027-01-15", endDate="2027-01-16")
+            (run_dir / "review-queue.json").write_bytes(refresh.json_bytes({"candidates": [new]}))
+            one = refresh.build(root, run_dir, TODAY)
+            outputs = {n: (root/n).read_bytes() for n in refresh.RELEASE}
+            two = refresh.build(root, run_dir, TODAY)
+            self.assertEqual(one, two)
+            self.assertEqual(one["decisions"].get("added"), 1)
+            self.assertTrue(all((root/n).read_bytes() == data for n, data in outputs.items()))
 
     def test_spreadsheet_and_inline_script_escape_untrusted_content(self):
         e = dict(self.old, nameEn="=2+5", descriptionEn="</script><script>alert(1)</script>")

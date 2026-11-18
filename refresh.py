@@ -526,17 +526,30 @@ def build(root, input_dir, today, dry_run=False):
     if input_dir:
         run = json.loads((input_dir / "collection-status.json").read_bytes())
         candidates = json.loads((input_dir / "review-queue.json").read_bytes())["candidates"]
-        events, decisions = reconcile(catalog, config, run, candidates, today, until)
-        counts = Counter(d["action"] for d in decisions)
-        by_status = Counter(s["status"] for s in run["sources"])
-        fetched = sum(by_status[k] for k in ("success", "manual_review", "partial"))
-        status = dict(state="completed", mode="automatic", scheduled=True, sourceCount=run["sourceCount"],
-                      lastRunAt=run["lastRunAt"], okCount=fetched, failedCount=run["sourceCount"] - fetched,
-                      sourcesWithCandidates=by_status["success"] + by_status["partial"],
-                      sourcesWithoutParsedEvents=by_status["manual_review"], statusCounts=dict(by_status),
-                      pendingCount=counts["pending"], publishedNew=counts["added"], updatedCount=counts["updated"],
-                      confirmedCount=counts["confirmed"])
-        report = {"lastRunAt": run["lastRunAt"], "counts": dict(counts), "decisions": decisions}
+        fingerprint = hashlib.sha256(compact([config, run, candidates]).encode()).hexdigest()
+        previous = input_dir / "publication-report.json"
+        if previous.is_file() and status.get("lastRunAt") == run["lastRunAt"]:
+            saved = json.loads(previous.read_bytes())
+            if (saved.get("runFingerprint") == fingerprint and
+                    status.get("runFingerprint") == fingerprint):
+                report = saved
+        if report is not None:
+            # A retry of the same evidence should keep its original audit
+            # classifications; otherwise the added records would become confirmations.
+            events = catalog
+        else:
+            events, decisions = reconcile(catalog, config, run, candidates, today, until)
+            counts = Counter(d["action"] for d in decisions)
+            by_status = Counter(s["status"] for s in run["sources"])
+            fetched = sum(by_status[k] for k in ("success", "manual_review", "partial"))
+            status = dict(state="completed", mode="automatic", scheduled=True, sourceCount=run["sourceCount"],
+                          lastRunAt=run["lastRunAt"], okCount=fetched, failedCount=run["sourceCount"] - fetched,
+                          sourcesWithCandidates=by_status["success"] + by_status["partial"],
+                          sourcesWithoutParsedEvents=by_status["manual_review"], statusCounts=dict(by_status),
+                          pendingCount=counts["pending"], publishedNew=counts["added"], updatedCount=counts["updated"],
+                          confirmedCount=counts["confirmed"])
+            report = {"lastRunAt": run["lastRunAt"], "counts": dict(counts), "decisions": decisions}
+            status["runFingerprint"] = report["runFingerprint"] = fingerprint
     else:
         events = catalog
     for e in events:
