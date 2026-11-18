@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "notice": "公开官网监控来源；采集结果需人工核验后发布。",
+  "notice": "每日检查展会官网与主办方日历，核验通过后自动发布。",
   "sources": [
     {
       "id": "source-v-cairo-ict-2026",
@@ -659,7 +659,9 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-05",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
     },
     {
       "id": "source-v-open-finance-connect-chile-2027",
@@ -874,7 +876,7 @@
       "id": "source-v-finovate-spring-2027",
       "name": "美国春季金融科技创新大会",
       "nameEn": "FinovateSpring 2027",
-      "url": "https://finovate.com/finovatespring-2027-is-live-new-venue-same-finovate-experience/",
+      "url": "https://informaconnect.com/finovatespring/",
       "region": "north-america",
       "topics": [
         "banking",
@@ -1529,6 +1531,543 @@
       "official": true,
       "enabled": true,
       "reviewedAt": "2026-11-13"
+    },
+    {
+      "id": "source-nov18-africa-fintech-kigali",
+      "name": "非洲金融科技峰会·基加利",
+      "nameEn": "Africa Fintech Summit Kigali 2026",
+      "url": "https://www.africafintechsummit.com/events/africa-fintech-summit-kigali-2026",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-expoisp-salvador",
+      "name": "巴西互联网服务商展·萨尔瓦多",
+      "nameEn": "EXPOISP Expedição BA 2026",
+      "url": "https://www.expoispbrasil.com.br/evento/expedicao-ba-2026",
+      "region": "south-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-itw-asia",
+      "name": "国际电信周亚洲站",
+      "nameEn": "ITW Asia 2026",
+      "url": "https://www.itwasia.com/",
+      "region": "asia",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-expoisp-sp",
+      "name": "巴西互联网服务商展·圣保罗",
+      "nameEn": "EXPOISP SP 2026",
+      "url": "https://www.expoispbrasil.com.br/evento/sp-2026",
+      "region": "south-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-consensus-hk",
+      "name": "Consensus 香港数字资产大会",
+      "nameEn": "Consensus Hong Kong 2027",
+      "url": "https://consensus-hongkong.coindesk.com/press/",
+      "region": "asia",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-mdm-west",
+      "name": "MD&M West 西部制造技术展·包装展区",
+      "nameEn": "MD&M West 2027 — Packaging Sector",
+      "url": "https://www.mdmwest.com/show-information/show-sectors/packaging/",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-fst-data-ai",
+      "name": "金融服务未来峰会·数据与人工智能",
+      "nameEn": "Future of Financial Services: Data & AI 2027",
+      "url": "https://www.fst.net.au/future-of-financial-services-data-ai/",
+      "region": "oceania",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-inclusive-fintech-forum",
+      "name": "普惠金融科技论坛",
+      "nameEn": "Inclusive FinTech Forum 2027",
+      "url": "https://www.inclusivefintechforum.com/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-fintech-hui",
+      "name": "新西兰金融科技峰会",
+      "nameEn": "FinTech Hui Taumata 2027",
+      "url": "https://www.fintechhui.nz/",
+      "region": "oceania",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-pharmap",
+      "name": "欧洲制药制造与包装大会",
+      "nameEn": "Pharmaceutical Manufacturing and Packaging Congress 2027",
+      "url": "https://pharmap-congress.com/",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-itw-global",
+      "name": "国际电信周全球大会",
+      "nameEn": "ITW Global 2027",
+      "url": "https://www.itwglobalevent.com/",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-eic-berlin",
+      "name": "欧洲身份与云大会",
+      "nameEn": "European Identity and Cloud Conference 2027",
+      "url": "https://www.kuppingercole.com/events/eic2027",
+      "region": "europe",
+      "topics": [
+        "identity"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-microfinance-tech",
+      "name": "小额金融科技峰会",
+      "nameEn": "Microfinance Technology Summit 2027",
+      "url": "https://www.microfinancetechsummit.com/",
+      "region": "africa",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-mwc-shanghai",
+      "name": "世界移动通信大会·上海",
+      "nameEn": "MWC Shanghai 2027",
+      "url": "https://www.mwcshanghai.com/register-your-interest",
+      "region": "asia",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-ofc-2027",
+      "name": "OFC 光通信技术大会暨展览会",
+      "nameEn": "OFC Conference and Exhibition 2027",
+      "url": "https://www.ofcconference.org/Exhibit-at-OFC",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-nab-2027",
+      "name": "NAB 广播电视技术展",
+      "nameEn": "NAB Show 2027",
+      "url": "https://www.nabshow.com/about-us/",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-satshow-2027",
+      "name": "SATShow 卫星通信展览周",
+      "nameEn": "SATShow Week 2027",
+      "url": "https://www.satshow.com/exhibition/",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "calendar-c9db82ed153d",
+      "name": "EXPO ISP Brasil",
+      "nameEn": "EXPO ISP Brasil",
+      "url": "https://www.expoispbrasil.com.br/",
+      "region": "",
+      "topics": [
+        "telecom"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-8ca4196d22af",
+      "name": "ITW Global Series Calendar",
+      "nameEn": "ITW Global Series Calendar",
+      "url": "https://www.itwglobalevent.com/agenda/itw-series-calendar",
+      "region": "",
+      "topics": [
+        "telecom"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-4a58818e4618",
+      "name": "KuppingerCole Events",
+      "nameEn": "KuppingerCole Events",
+      "url": "https://www.kuppingercole.com/events",
+      "region": "",
+      "topics": [
+        "identity"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-253a95753287",
+      "name": "Tech New Zealand conferences",
+      "nameEn": "Tech New Zealand conferences",
+      "url": "https://technewzealand.org.nz/our-conferences/",
+      "region": "",
+      "topics": [],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-fad9cfc35c7a",
+      "name": "LUXE PACK shows",
+      "nameEn": "LUXE PACK shows",
+      "url": "https://www.luxepack.com/",
+      "region": "",
+      "topics": [
+        "packaging"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-f1a8eff0f97b",
+      "name": "Africa Fintech Summit editions",
+      "nameEn": "Africa Fintech Summit editions",
+      "url": "https://www.africafintechsummit.com/",
+      "region": "",
+      "topics": [
+        "fintech"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "discover": true,
+      "kind": "calendar",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "detail-5b29b74b0abd",
+      "name": "坦桑尼亚包装技术展",
+      "nameEn": "AFRIPACK Expo Tanzania 2027",
+      "url": "https://www.afmass.com/tz/",
+      "region": "africa",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "detail-43d56242f645",
+      "name": "亚洲国际加工与包装展",
+      "nameEn": "ProPak Asia 2027",
+      "url": "https://www.propakasia.com/ppka/2027/en/about.asp",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "detail-a6427f8b6ac3",
+      "name": "华南标签与包装印刷展",
+      "nameEn": "LOUPE South China 2026",
+      "url": "https://www.loupe-southchina.com/travel-information",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "detail-624675bb5f98",
+      "name": "英国PAY360支付展会",
+      "nameEn": "PAY360 2027",
+      "url": "https://pay360event.com/faqs",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-aba-community",
+      "name": "美国社区银行大会",
+      "nameEn": "ABA Conference for Community Bankers 2027",
+      "url": "https://www.aba.com/training-events/conferences/conference-for-community-bankers/program",
+      "region": "north-america",
+      "topics": [
+        "banking",
+        "fintech"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-ethdenver",
+      "name": "丹佛以太坊与区块链节",
+      "nameEn": "ETHDenver 2027",
+      "url": "https://ethdenver.com/",
+      "region": "north-america",
+      "topics": [
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-luxe-shanghai",
+      "name": "上海国际奢侈品包装展",
+      "nameEn": "LUXE PACK Shanghai 2027",
+      "url": "https://www.luxepackshanghai.com/general-information/dates-and-opening-hours/",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-payments-ca",
+      "name": "加拿大支付峰会",
+      "nameEn": "The Payments Canada SUMMIT 2027",
+      "url": "https://www.payments.ca/connect/annual-conference",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-btc-prague",
+      "name": "布拉格比特币大会",
+      "nameEn": "BTC Prague 2027",
+      "url": "https://btcprague.com/",
+      "region": "europe",
+      "topics": [
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "source-nov18-american-packaging",
+      "name": "美国包装峰会",
+      "nameEn": "American Packaging Summit 2027",
+      "url": "https://uspacksummit.com/",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
+    },
+    {
+      "id": "calendar-28c2f93badd6",
+      "name": "American Bankers Association conferences",
+      "nameEn": "American Bankers Association conferences",
+      "url": "https://www.aba.com/training-events/conferences",
+      "region": "",
+      "topics": [
+        "banking"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-158ba54bbdee",
+      "name": "Payments Canada events",
+      "nameEn": "Payments Canada events",
+      "url": "https://www.payments.ca/connect/events",
+      "region": "",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-20cd36b94eee",
+      "name": "Generis Group conferences",
+      "nameEn": "Generis Group conferences",
+      "url": "https://generisgp.com/events/",
+      "region": "",
+      "topics": [],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10
+    },
+    {
+      "id": "calendar-cc6a807a1371",
+      "name": "LOUPE Southeast Asia",
+      "nameEn": "LOUPE Southeast Asia",
+      "url": "https://www.loupe-seasia.com/travel-information",
+      "region": "",
+      "topics": [
+        "packaging"
+      ],
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-18",
+      "sourceType": "discovery",
+      "maxLinkedPages": 10,
+      "partOfEventId": "v-propak-asia-2027"
+    },
+    {
+      "id": "faq-live-sff-2026",
+      "name": "新加坡金融科技节",
+      "nameEn": "Singapore FinTech Festival 2026",
+      "url": "https://www.fintechfestival.sg/faq",
+      "region": "asia",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "official": true,
+      "enabled": true,
+      "reviewedAt": "2026-11-18"
     }
   ]
 }
