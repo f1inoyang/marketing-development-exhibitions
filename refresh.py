@@ -404,8 +404,11 @@ def source_tree(root):
     with ZipFile(root / "exhibition-source.zip") as archive:
         for name in SOURCE_FILES:
             tree[name] = archive.read(PREFIX + name)
+        labels_path = "data/company-labels.json"
+        if PREFIX + labels_path in archive.namelist():
+            tree[labels_path] = archive.read(PREFIX + labels_path)
     # An extracted development checkout may supply revised UI or curated records.
-    for name in SOURCE_FILES:
+    for name in (*SOURCE_FILES, labels_path):
         path = root / "site" / name
         if path.is_file():
             tree[name] = path.read_bytes()
@@ -429,23 +432,54 @@ def validate_catalog(events):
         used_ids.add(e["id"])
 
 
-def csv_export(events, en):
+def company_export(event, en, labels=None):
+    relationships = {"peer": ("同行", "Peer"), "supplier": ("供应商", "Supplier"),
+                     "both": ("同行及供应商", "Peer & supplier"), "watchlist": ("清单企业", "Listed company")}
+    roles = {"attendee": ("参会机构", "Attending organization"), "exhibitor": ("参展商", "Exhibitor"), "sponsor": ("赞助商", "Sponsor"),
+             "speaker": ("讲者所属机构", "Speaker affiliation"), "organizer": ("主办方", "Organizer"),
+             "partner": ("展会合作方", "Event partner")}
+    lines = []
+    for m in event.get("companyMatches", []):
+        if m.get("relationship") not in relationships or m.get("role") not in roles:
+            continue
+        official = m["name"]
+        display = (labels or {}).get(m["companyId"], {}).get("en" if en else "zh", official)
+        names = official if display == official else f"{display} ({official})"
+        lines.append(" · ".join([names, relationships[m["relationship"]][en],
+                                 roles[m["role"]][en], m["checkedAt"], m["sourceUrl"]]))
+    return "\n".join(lines)
+
+
+def csv_export(events, en, labels=None):
     f = io.StringIO(newline="")
     w = csv.writer(f)
     header = ("Event,Region,Country,City,Start date,End date,Topics,Official website,Overview,Verification notes,Checked on" if en
               else "展会名称,大区,国家,城市,开始日期,结束日期,主题,官网链接,简介,核验说明,核验日期")
-    w.writerow(header.split(","))
+    w.writerow(header.split(",") + ["Companies, roles and sources" if en else "参与企业、角色及来源"])
     suffix = "En" if en else ""
     for e in events:
         row = [e["name"+suffix], REGIONS[e["region"]][en], e["country"+suffix], e["city"+suffix],
                e["startDate"], e["endDate"], " / ".join(TOPICS[t][en] for t in e["topics"]),
-               e["sourceUrl"], e["description"+suffix], e["sourceNote"+suffix], e["verifiedAt"]]
+               e["sourceUrl"], e["description"+suffix], e["sourceNote"+suffix], e["verifiedAt"], company_export(e, en, labels)]
         w.writerow(["'" + v if v.lstrip().startswith(("=", "+", "-", "@")) or v.startswith(("\t", "\r", "\n")) else v for v in row])
     return f.getvalue().encode("utf-8-sig")
 
 
-def make_bundle(meta, rows, world, status):
-    data = compact(dict(meta=meta, events=rows, worldMap=world, collectionStatus=status))
+def confirmed_labels(rows, available):
+    public = {}
+    for event in rows:
+        for match in event.get("companyMatches", []):
+            cid = match["companyId"]
+            labels = available.get(cid, {})
+            if isinstance(labels, dict):
+                pair = {k: labels[k] for k in ("zh", "en") if isinstance(labels.get(k), str) and labels[k].strip()}
+                if pair:
+                    public[cid] = pair
+    return public
+
+
+def make_bundle(meta, rows, world, status, labels=None):
+    data = compact(dict(meta=meta, events=rows, worldMap=world, collectionStatus=status, companyLabels=labels or {}))
     data = data.replace("<", "\\u003c").replace(">", "\\u003e").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
     return ("window.ATLAS_DATA=" + data + ";\n").encode()
 
@@ -552,10 +586,19 @@ def build(root, input_dir, today, dry_run=False):
             status["runFingerprint"] = report["runFingerprint"] = fingerprint
     else:
         events = catalog
+    if input_dir and (input_dir / "company-evidence.json").is_file() and (root / "company-watchlist.json").is_file():
+        import company_capture
+        company_capture.apply_snapshot(
+            events, json.loads((root / "company-watchlist.json").read_bytes()),
+            json.loads((input_dir / "company-evidence.json").read_bytes()), run["lastRunAt"])
     for e in events:
         e["timeZone"] = event_zone(e)
     validate_catalog(events)
     rows = sorted((e for e in events if in_window(e, today, until)), key=lambda e: (e["startDate"], e["nameEn"], e["id"]))
+    available_labels = json.loads(tree.get("data/company-labels.json", b"{}"))
+    if input_dir and (input_dir / "company-labels.json").is_file():
+        available_labels.update(json.loads((input_dir / "company-labels.json").read_bytes()))
+    labels = confirmed_labels(rows, available_labels)
     if input_dir:
         status["activeCount"] = len(rows)
         report["activeCount"] = len(rows)
@@ -567,14 +610,15 @@ def build(root, input_dir, today, dry_run=False):
     imported["events"] = []
     tree.update({"data/events.json": json_bytes(imported), "data/verified-events.json": json_bytes(curated),
                  "data/sources.json": json_bytes(config), "data/collection-status.json": json_bytes(status),
-                 "data/bundle.js": make_bundle(meta, rows, tree["assets/world.svg"].decode(), status)})
+                 "data/company-labels.json": json_bytes(labels),
+                 "data/bundle.js": make_bundle(meta, rows, tree["assets/world.svg"].decode(), status, labels)})
     # Include the same release implementation in the source download.
-    for name in ("collector.py", "refresh.py", "test_collector.py", "test_refresh.py", "README.md"):
+    for name in ("collector.py", "refresh.py", "test_collector.py", "test_refresh.py", "company_capture.py", "test_company_capture.py", "company-sources.json", "README.md"):
         if (root / name).is_file():
             tree[name] = (root / name).read_bytes()
     tree[".github/workflows/collect.yml"] = (root / ".github/workflows/collect.yml").read_bytes()
-    output = {"index.html": single_page(tree), "events-zh.csv": csv_export(rows, False),
-              "events-en.csv": csv_export(rows, True), "exhibition-source.zip": archive_bytes(tree)}
+    output = {"index.html": single_page(tree), "events-zh.csv": csv_export(rows, False, labels),
+              "events-en.csv": csv_export(rows, True, labels), "exhibition-source.zip": archive_bytes(tree)}
     verify_outputs(output, rows)
     if not dry_run:
         writes = [(root / name, value) for name, value in output.items()]

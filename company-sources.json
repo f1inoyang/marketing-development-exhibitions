@@ -1,0 +1,192 @@
+{
+  "sources": [
+    {
+      "eventId": "live-sff-2026",
+      "url": "https://www.fintechfestival.sg/exhibitors",
+      "role": "exhibitor",
+      "editionAliases": [
+        "SFF",
+        "Singapore FinTech Festival"
+      ]
+    },
+    {
+      "eventId": "live-sff-2026",
+      "url": "https://www.fintechfestival.sg/exhibitors",
+      "role": "sponsor",
+      "editionAliases": [
+        "SFF",
+        "Singapore FinTech Festival"
+      ]
+    },
+    {
+      "eventId": "live-sff-2026",
+      "url": "https://www.fintechfestival.sg/attendee-organisations",
+      "role": "attendee",
+      "editionAliases": [
+        "SFF",
+        "Singapore FinTech Festival"
+      ]
+    },
+    {
+      "eventId": "v-id4africa-2027",
+      "url": "https://id4africaevents.com/2027/exhibitors/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "ID4Africa",
+        "ID4Africa AGM"
+      ]
+    },
+    {
+      "eventId": "v-hsp-emea-2027",
+      "url": "https://hsp-emea.com/sponsors-exhibitors-partners/2027/",
+      "role": "sponsor",
+      "editionAliases": [
+        "High Security Printing EMEA",
+        "HSP EMEA",
+        "HSPE2027"
+      ]
+    },
+    {
+      "eventId": "v-hsp-emea-2027",
+      "url": "https://hsp-emea.com/sponsors-exhibitors-partners/2027/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "High Security Printing EMEA",
+        "HSP EMEA",
+        "HSPE2027"
+      ]
+    },
+    {
+      "eventId": "v-paris-packaging-week-2027",
+      "url": "https://www.parispackagingweek.com/en/exhibitors/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Paris Packaging Week"
+      ]
+    },
+    {
+      "eventId": "v-trustech-2026",
+      "url": "https://www.trustech-event.com/en/exhibit/why-exhibit/reasons-exhibit",
+      "role": "exhibitor",
+      "editionAliases": [
+        "TRUSTECH"
+      ]
+    },
+    {
+      "eventId": "v-fintech-connect-2026",
+      "url": "https://www.fintechconnect.com/sponsors-exhibitors",
+      "role": "exhibitor",
+      "editionAliases": [
+        "FinTech Connect"
+      ]
+    },
+    {
+      "eventId": "v-fintech-connect-2026",
+      "url": "https://www.fintechconnect.com/sponsors-exhibitors",
+      "role": "sponsor",
+      "editionAliases": [
+        "FinTech Connect"
+      ]
+    },
+    {
+      "eventId": "v-hsp-asia-2026",
+      "url": "https://hsp-asia.com/sponsors-exhibitors-partners/",
+      "role": "sponsor",
+      "editionAliases": [
+        "HSP Asia",
+        "High Security Printing Asia"
+      ]
+    },
+    {
+      "eventId": "v-hsp-asia-2026",
+      "url": "https://hsp-asia.com/sponsors-exhibitors-partners/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "HSP Asia",
+        "High Security Printing Asia"
+      ]
+    },
+    {
+      "eventId": "v-odds-2027",
+      "url": "https://opticaldigitalsecurity.com/table-top-exhibitors/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Optical & Digital Document Security",
+        "ODDS"
+      ]
+    },
+    {
+      "eventId": "live-mwc-barcelona-2027",
+      "url": "https://www.mwcbarcelona.com/exhibitors",
+      "role": "exhibitor",
+      "editionAliases": [
+        "MWC27 Barcelona",
+        "MWC Barcelona",
+        "MWC27"
+      ]
+    },
+    {
+      "eventId": "v-identity-week-europe-2027",
+      "url": "https://www.terrapinn.com/exhibition/identity-week/exhibitors.stm",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Identity Week Europe",
+        "Identity Week Europe 2027"
+      ]
+    },
+    {
+      "eventId": "v-identity-week-europe-2027",
+      "url": "https://www.terrapinn.com/exhibition/identity-week/exhibitors.stm",
+      "role": "sponsor",
+      "editionAliases": [
+        "Identity Week Europe",
+        "Identity Week Europe 2027"
+      ]
+    },
+    {
+      "eventId": "v-taxstamp-2027",
+      "url": "https://taxstamptraceabilityforum.com/sponsors-exhibitors-partners/2027/",
+      "role": "sponsor",
+      "editionAliases": [
+        "Tax Stamp & Traceability Forum",
+        "Tax Stamp and Traceability Forum",
+        "TSTF2027"
+      ]
+    },
+    {
+      "eventId": "v-taxstamp-2027",
+      "url": "https://taxstamptraceabilityforum.com/sponsors-exhibitors-partners/2027/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Tax Stamp & Traceability Forum",
+        "Tax Stamp and Traceability Forum",
+        "TSTF2027"
+      ]
+    },
+    {
+      "eventId": "v-trustech-2026",
+      "url": "https://www.trustech-event.com/fr-FR/campaigns/vis-ga-gen",
+      "role": "exhibitor",
+      "editionAliases": [
+        "TRUSTECH"
+      ]
+    },
+    {
+      "eventId": "nov18-itw-asia",
+      "url": "https://www.itwasia.com/involved/sponsor-list",
+      "role": "sponsor",
+      "editionAliases": [
+        "ITW Asia",
+        "International Telecoms Week Asia"
+      ]
+    },
+    {
+      "eventId": "v-fintech-connect-2026",
+      "url": "https://www.fintechconnect.com/exhibitors",
+      "role": "exhibitor",
+      "editionAliases": [
+        "FinTech Connect"
+      ]
+    }
+  ]
+}

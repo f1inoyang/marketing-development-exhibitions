@@ -1099,6 +1099,10 @@ def main():
             "sources": statuses,
         },
     )
+    # Role rosters use the same edition time and origin/robots rules.
+    import company_capture
+    company_capture.scan(args.config.resolve().parent, args.output_dir, checked_at,
+                         timeout=max(3, min(args.timeout, 60)), workers=args.workers)
     return 0
 
 

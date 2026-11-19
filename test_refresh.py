@@ -38,6 +38,20 @@ class PublicationTests(unittest.TestCase):
     def cycle(self,*c):
         return refresh.reconcile([self.old], {"sources":[self.source]}, self.run, c, TODAY, END)
 
+    def test_new_verified_edition_gets_company_coverage_in_same_run(self):
+        from company_capture import read_catalog
+        event = dict(self.c, name="Tokyo Payment Expo", city="Tokyo", country="JP",
+                     startDate="2027-02-05", endDate="2027-02-06",
+                     sourceUrl="https://www.fintechfestival.sg/tokyo-payment-expo")
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            shutil.copyfile(Path(__file__).with_name("exhibition-source.zip"), root / "exhibition-source.zip")
+            (root / "sources.json").write_text(json.dumps({"sources":[self.source]}))
+            (root / "collection-status.json").write_text(json.dumps(self.run))
+            (root / "review-queue.json").write_text(json.dumps({"candidates":[event]}))
+            names = {e["nameEn"] for e in read_catalog(root, root, STAMP)}
+        self.assertIn(event["name"], names)
+
     def test_ongoing_includes_start_and_last_day(self):
         self.assertTrue(refresh.in_window(self.old, TODAY, END))
         self.assertTrue(refresh.in_window(self.old, date(2026, 11, 20), END))
@@ -179,6 +193,20 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(one, two)
             self.assertEqual(one["decisions"].get("added"), 1)
             self.assertTrue(all((root/n).read_bytes() == data for n, data in outputs.items()))
+
+    def test_only_confirmed_company_names_are_exported_with_official_spellings(self):
+        match = dict(companyId="confirmed", name="Example Singapore Pte Ltd", relationship="peer",
+                     role="exhibitor", checkedAt="2026-11-19", sourceUrl="https://example.org/exhibitors")
+        event = dict(self.old, companyMatches=[match])
+        available = {"confirmed": {"zh":"示例公司", "en":"Example", "priority":"P2"},
+                     "unconfirmed": {"zh":"其他企业", "en":"Other"}}
+        labels = refresh.confirmed_labels([event], available)
+        self.assertEqual(labels, {"confirmed": {"zh":"示例公司", "en":"Example"}})
+        for en, expected in [(False,"示例公司"),(True,"Example")]:
+            with self.subTest(en=en):
+                cell = list(csv.reader(io.StringIO(refresh.csv_export([event],en,labels).decode("utf-8-sig"))))[1][-1]
+                self.assertIn(f"{expected} ({match['name']})", cell)
+                self.assertIn(match["sourceUrl"], cell)
 
     def test_spreadsheet_and_inline_script_escape_untrusted_content(self):
         e = dict(self.old, nameEn="=2+5", descriptionEn="</script><script>alert(1)</script>")

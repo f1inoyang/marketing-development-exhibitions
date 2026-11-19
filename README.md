@@ -2,6 +2,14 @@
 
 按举办地和主题浏览全球展会，可切换中英文、打开官网或下载筛选后的清单。网站和两份 CSV 快照收录举办地当地当天仍在举行，以及在 2027 年 6 月 30 日或之前开幕的活动。跨月展会保留完整展期。
 
+## 参与企业标签
+
+当前监测名单有 229 家同行。选择「有同行参加」可查看有本届官方依据的展会。卡片上的企业标签可打开详情，逐项查看官网使用的公司名称、参展或赞助等角色、核验日期和来源。中英文企业名均可用于搜索，两种语言的 CSV 和 JSON 都包含匹配结果。
+
+每日任务同时检查已有展会和当天新收录的展会，从展会首页发现同域名录，并读取 `company-sources.json` 中按届次配置的官方入口。采集器检查届次、名单分组和企业名称，有歧义的简称可结合名录卡片中的企业官网核实。官网暂时无法访问时，已有标签保留上次核验日期。主办方撤下名录或更改届次时，会重新评估相应标签。
+
+更新名单时，在本地将确认过的企业名称、别名和关系整理成 `companies` 数组，用 `python3 company_capture.py --compile-roster private-roster.json --output company-watchlist.json` 生成公开匹配配置。原始名单及内部优先级仅在本地维护。完整运行的 `company-evidence.json` 随 Actions 审计包保存，可按展会查看各名录的访问结果。
+
 ## 每日更新
 
 GitHub Actions 每日北京时间 09:17 定时读取 `sources.json` 中启用的官网，也支持在 Actions 页面手动运行 **Refresh and publish exhibition calendar**。实际开始时间取决于 GitHub 排队情况。
@@ -24,7 +32,7 @@ python3 refresh.py --input collection-run --dry-run
 python3 refresh.py --input collection-run
 ```
 
-`--dry-run` 在内存中构建并校验，不写文件。已有数据可直接用 `python3 refresh.py --build-only` 重建。可用 `--as-of YYYY-MM-DD` 重放将各举办地固定在指定日以重放边界。
+`--dry-run` 在内存中构建并校验，不写文件。已有数据可直接用 `python3 refresh.py --build-only` 重建。可用 `--as-of YYYY-MM-DD` 在指定日期重放展期边界。
 
 `exhibition-source.zip` 保存多文件页面、世界地图、正式资料及生成本次归档的脚本。在仓库根目录将归档内的 `exhibition-atlas/` 目录解压并改名为 `site/`，即可修改页面或补充 `site/data/verified-events.json` 的双语资料。构建会优先读取该目录，自动更新归档、单文件网站与双语 CSV。全新检出时，程序会直接读取已提交归档。根目录 `sources.json` 是正式官网配置。
 
