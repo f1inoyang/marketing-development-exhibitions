@@ -450,17 +450,18 @@ def company_export(event, en, labels=None):
     return "\n".join(lines)
 
 
-def csv_export(events, en, labels=None):
+def csv_export(events, en, labels=None, updated_at=""):
     f = io.StringIO(newline="")
     w = csv.writer(f)
     header = ("Event,Region,Country,City,Start date,End date,Topics,Official website,Overview,Verification notes,Checked on" if en
               else "展会名称,大区,国家,城市,开始日期,结束日期,主题,官网链接,简介,核验说明,核验日期")
-    w.writerow(header.split(",") + ["Companies, roles and sources" if en else "参与企业、角色及来源"])
+    w.writerow(header.split(",") + ["Companies, roles and sources" if en else "参与企业、角色及来源",
+                                    "Data updated at (UTC)" if en else "数据更新时间（UTC）"])
     suffix = "En" if en else ""
     for e in events:
         row = [e["name"+suffix], REGIONS[e["region"]][en], e["country"+suffix], e["city"+suffix],
                e["startDate"], e["endDate"], " / ".join(TOPICS[t][en] for t in e["topics"]),
-               e["sourceUrl"], e["description"+suffix], e["sourceNote"+suffix], e["verifiedAt"], company_export(e, en, labels)]
+               e["sourceUrl"], e["description"+suffix], e["sourceNote"+suffix], e["verifiedAt"], company_export(e, en, labels), updated_at]
         w.writerow(["'" + v if v.lstrip().startswith(("=", "+", "-", "@")) or v.startswith(("\t", "\r", "\n")) else v for v in row])
     return f.getvalue().encode("utf-8-sig")
 
@@ -482,6 +483,29 @@ def make_bundle(meta, rows, world, status, labels=None):
     data = compact(dict(meta=meta, events=rows, worldMap=world, collectionStatus=status, companyLabels=labels or {}))
     data = data.replace("<", "\\u003c").replace(">", "\\u003e").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
     return ("window.ATLAS_DATA=" + data + ";\n").encode()
+
+
+def completion_stamp(status):
+    raw = status.get("dataUpdatedAt")
+    if not raw:
+        return ""
+    finished = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    started = datetime.fromisoformat(status["lastRunAt"].replace("Z", "+00:00"))
+    if finished.tzinfo is None or started.tzinfo is None or finished < started:
+        raise ValueError("Collection completion must be a zoned timestamp at or after the start")
+    return finished.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def stamp_template(html, updated_at):
+    page = html.decode()
+    page = re.sub(r'(<meta name="exhibition-data-updated-at" content=")[^"]*(">)',
+                  lambda m: m[1] + updated_at + m[2], page)
+    if updated_at:
+        page = re.sub(r'src="data/bundle\.js(?:\?[^"]*)?"',
+                      f'src="data/bundle.js?v={updated_at}"', page)
+    display = updated_at.replace("T", " ").replace("Z", " UTC") if updated_at else "—"
+    return re.sub(r'<time id="update-time"[^>]*>[^<]*</time>',
+                  f'<time id="update-time" datetime="{updated_at}">{display}</time>', page).encode()
 
 
 def single_page(tree):
@@ -577,7 +601,7 @@ def build(root, input_dir, today, dry_run=False):
             by_status = Counter(s["status"] for s in run["sources"])
             fetched = sum(by_status[k] for k in ("success", "manual_review", "partial"))
             status = dict(state="completed", mode="automatic", scheduled=True, sourceCount=run["sourceCount"],
-                          lastRunAt=run["lastRunAt"], okCount=fetched, failedCount=run["sourceCount"] - fetched,
+                          lastRunAt=run["lastRunAt"], dataUpdatedAt=run.get("completedAt"), okCount=fetched, failedCount=run["sourceCount"] - fetched,
                           sourcesWithCandidates=by_status["success"] + by_status["partial"],
                           sourcesWithoutParsedEvents=by_status["manual_review"], statusCounts=dict(by_status),
                           pendingCount=counts["pending"], publishedNew=counts["added"], updatedCount=counts["updated"],
@@ -602,7 +626,9 @@ def build(root, input_dir, today, dry_run=False):
     if input_dir:
         status["activeCount"] = len(rows)
         report["activeCount"] = len(rows)
-    meta.update(checkedAt=catalog_day(today).isoformat(), note="按举办地归类，收录进行中和即将举行的展会。",
+    updated_at = completion_stamp(status)
+    tree["index.html"] = stamp_template(tree["index.html"], updated_at)
+    meta.update(dataUpdatedAt=updated_at or None, checkedAt=catalog_day(today).isoformat(), note="按举办地归类，收录进行中和即将举行的展会。",
                 noteEn="Current and upcoming events grouped by host location.")
     curated["events"] = events
     curated["collectionWindow"] = dict(asOf=catalog_day(today).isoformat(), endDate=until.isoformat(),
@@ -617,8 +643,8 @@ def build(root, input_dir, today, dry_run=False):
         if (root / name).is_file():
             tree[name] = (root / name).read_bytes()
     tree[".github/workflows/collect.yml"] = (root / ".github/workflows/collect.yml").read_bytes()
-    output = {"index.html": single_page(tree), "events-zh.csv": csv_export(rows, False, labels),
-              "events-en.csv": csv_export(rows, True, labels), "exhibition-source.zip": archive_bytes(tree)}
+    output = {"index.html": single_page(tree), "events-zh.csv": csv_export(rows, False, labels, updated_at),
+              "events-en.csv": csv_export(rows, True, labels, updated_at), "exhibition-source.zip": archive_bytes(tree)}
     verify_outputs(output, rows)
     if not dry_run:
         writes = [(root / name, value) for name, value in output.items()]

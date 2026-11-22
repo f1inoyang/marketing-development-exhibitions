@@ -183,6 +183,8 @@ class PublicationTests(unittest.TestCase):
             (root / "sources.json").write_bytes(refresh.json_bytes({"sources": [self.source]}))
             run_dir = root / "run"
             run_dir.mkdir()
+            finished = "2026-11-18T09:05:32Z"
+            self.run["completedAt"] = finished
             (run_dir / "collection-status.json").write_bytes(refresh.json_bytes(self.run))
             new = dict(self.c, name="Japan Banking Expo 2027", city="Tokyo", country="JP",
                        startDate="2027-01-15", endDate="2027-01-16")
@@ -193,6 +195,23 @@ class PublicationTests(unittest.TestCase):
             self.assertEqual(one, two)
             self.assertEqual(one["decisions"].get("added"), 1)
             self.assertTrue(all((root/n).read_bytes() == data for n, data in outputs.items()))
+            refresh.build(root, None, TODAY)
+            self.assertTrue(all((root/n).read_bytes() == data for n, data in outputs.items()))
+            for name in ("events-en.csv", "events-zh.csv"):
+                rows = list(csv.reader(io.StringIO(outputs[name].decode("utf-8-sig"))))
+                self.assertTrue(all(row[-1] == finished for row in rows[1:]))
+            self.run["completedAt"] = "2026-11-18T11:05:32Z"
+            (run_dir / "collection-status.json").write_bytes(refresh.json_bytes(self.run))
+            refresh.build(root, run_dir, TODAY)
+            with ZipFile(root / "exhibition-source.zip") as archive:
+                status = json.loads(archive.read(refresh.PREFIX + "data/collection-status.json"))
+                self.assertEqual(status["dataUpdatedAt"], self.run["completedAt"])
+
+    def test_only_precise_finished_instants_can_label_an_update(self):
+        self.assertEqual(refresh.completion_stamp({"lastRunAt": STAMP}), "")
+        for wrong in ("2026-11-18", "2026-11-18T08:59:59Z"):
+            with self.subTest(wrong=wrong), self.assertRaises(ValueError):
+                refresh.completion_stamp({"lastRunAt": STAMP, "dataUpdatedAt": wrong})
 
     def test_only_confirmed_company_names_are_exported_with_official_spellings(self):
         match = dict(companyId="confirmed", name="Example Singapore Pte Ltd", relationship="peer",
@@ -204,7 +223,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(labels, {"confirmed": {"zh":"示例公司", "en":"Example"}})
         for en, expected in [(False,"示例公司"),(True,"Example")]:
             with self.subTest(en=en):
-                cell = list(csv.reader(io.StringIO(refresh.csv_export([event],en,labels).decode("utf-8-sig"))))[1][-1]
+                cell = list(csv.reader(io.StringIO(refresh.csv_export([event],en,labels).decode("utf-8-sig"))))[1][-2]
                 self.assertIn(f"{expected} ({match['name']})", cell)
                 self.assertIn(match["sourceUrl"], cell)
 

@@ -1083,26 +1083,27 @@ def main():
             "candidates": merged,
         },
     )
-    atomic_json(
-        args.output_dir / "collection-status.json",
-        {
-            "mode": "source_monitoring",
-            "state": "completed" if sources else "not_configured",
-            "lastRunAt": checked_at,
-            "scheduled": False,
-            "scheduleNote": "此文件仅证明一次脚本执行；定时任务是否启用须在 GitHub Actions 核实。",
-            "sourceCount": len(sources),
-            "newCandidateCount": new_count,
-            "pendingCount": sum(
-                item.get("reviewStatus") == "pending" for item in merged
-            ),
-            "sources": statuses,
-        },
-    )
+    status_path = args.output_dir / "collection-status.json"
+    status = {
+        "mode": "source_monitoring",
+        "state": "completed" if sources else "not_configured",
+        "lastRunAt": checked_at,
+        "scheduled": False,
+        "scheduleNote": "此文件仅证明一次脚本执行；定时任务是否启用须在 GitHub Actions 核实。",
+        "sourceCount": len(sources),
+        "newCandidateCount": new_count,
+        "pendingCount": sum(
+            item.get("reviewStatus") == "pending" for item in merged
+        ),
+        "sources": statuses,
+    }
+    atomic_json(status_path, status)
     # Role rosters use the same edition time and origin/robots rules.
     import company_capture
     company_capture.scan(args.config.resolve().parent, args.output_dir, checked_at,
                          timeout=max(3, min(args.timeout, 60)), workers=args.workers)
+    status["completedAt"] = timestamp()
+    atomic_json(status_path, status)
     return 0
 
 
