@@ -187,6 +187,71 @@
       "editionAliases": [
         "FinTech Connect"
       ]
+    },
+    {
+      "eventId": "nov18-ofc-2027",
+      "url": "https://ofc27.mapyourshow.com/8_0/exhibitor/exhibitor-list.cfm?export=pdf",
+      "role": "exhibitor",
+      "editionAliases": [
+        "OFC 2027"
+      ]
+    },
+    {
+      "eventId": "nov13-loupe-mexico",
+      "url": "https://exhibitor-list.loupe-mexico.com/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "LOUPE Mexico"
+      ]
+    },
+    {
+      "eventId": "v-the-point-payments-nz-2026",
+      "url": "https://thepoint2026.paymentsnz.co.nz/FIS",
+      "role": "sponsor",
+      "editionAliases": [
+        "The Point"
+      ]
+    },
+    {
+      "eventId": "v-the-point-payments-nz-2026",
+      "url": "https://thepoint2026.paymentsnz.co.nz/speakers",
+      "role": "speaker",
+      "editionAliases": [
+        "The Point"
+      ]
+    },
+    {
+      "eventId": "v-andina-link-2027",
+      "url": "https://cartagena.andinalink.com/muestra-comercial-2027/",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Andina Link"
+      ]
+    },
+    {
+      "eventId": "nov13-loupe-south-china",
+      "url": "https://southchina.loupe-asia.com.cn/exhibitor-list-visitor",
+      "role": "exhibitor",
+      "editionAliases": [
+        "LOUPE South China",
+        "华南国际标签与包装印刷展览会"
+      ]
+    },
+    {
+      "eventId": "nov13-gulf-print-pack",
+      "url": "https://www.gulfprintpack.com/exhibitorlist/download",
+      "role": "exhibitor",
+      "editionAliases": [
+        "Gulf Print & Pack"
+      ]
+    },
+    {
+      "eventId": "nov22-loupe-southeast-asia",
+      "url": "https://www.loupe-seasia.com/exhibitor-list-visitor",
+      "role": "exhibitor",
+      "editionAliases": [
+        "LOUPE Southeast Asia"
+      ]
     }
   ]
 }

@@ -156,9 +156,13 @@ class Fetcher:
                         raise ValueError("Redirect without Location")
                     url = urljoin(url, target)
                     continue
-                body = response.read(MAX_BYTES + 1)
-                if len(body) > MAX_BYTES:
-                    raise ValueError("Response exceeds the 2 MiB collection limit")
+                # QUBE publishes its complete programme in larger Wix pages.
+                limit = 4 * 1024 * 1024 if parsed.hostname == "www.qubevents.com" else MAX_BYTES
+                body = response.read(limit + 1)
+                if len(body) > limit:
+                    raise ValueError(f"Response exceeds the {limit // (1024 * 1024)} MiB collection limit")
+                if headers.get("content-type", "").split(";")[0].strip().lower() == "application/pdf":
+                    return {"status": response.status, "headers": headers, "body": "", "pdf": body, "url": url}
                 encoding = re.search(
                     r"charset=([\w-]+)", headers.get("content-type", ""), re.I
                 )
@@ -657,6 +661,30 @@ def organizer_faq_schedule(url, visible_text):
     ]
 
 
+def qube_detail_schedule(url, source, visible):
+    setting = source.get("programmeLocation")
+    if not setting or url != source["url"] or urlsplit(url).hostname != "www.qubevents.com":
+        return []
+    # The dated registration block is separate from menus, past speakers and the series calendar.
+    match = re.search(r"\b(\d{1,2})(?:\s*[–-]\s*(\d{1,2}))?\s+([A-Za-z]+)\s+(20\d{2})\s+([^<>]{3,125}?)\s+REGISTER HERE\b", visible, re.I)
+    if not match or setting["heading"].casefold() not in visible[max(0, match.start()-230):match.start()].casefold():
+        return []
+    venue = match[5]
+    if setting["city"].casefold() not in venue.casefold() or setting["printedCountry"].casefold() not in venue.casefold():
+        return []
+    try:
+        month = dt.datetime.strptime(match[3].title(), "%B").month
+        start = dt.date(int(match[4]), month, int(match[1]))
+        end = dt.date(start.year, month, int(match[2] or match[1]))
+    except ValueError:
+        return []
+    if end < start or not source["nameEn"].endswith(str(start.year)):
+        return []
+    return [{"@type":"BusinessEvent", "name":source["nameEn"], "url":url, "startDate":start.isoformat(),
+             "endDate":end.isoformat(), "location":{"name":venue, "address":{"addressLocality":setting["city"],
+             "addressCountry":setting["country"]}}, "sourcePassage":match[0]}]
+
+
 def page_records(result, source, checked_at):
     url, body = result["url"], result["body"]
     content_type = result.get("headers", {}).get("content-type", "").lower()
@@ -688,6 +716,7 @@ def page_records(result, source, checked_at):
             (item, "organizer_schedule")
             for item in organizer_faq_schedule(url, visible_text)
         )
+        raw.extend((item, "organizer_schedule") for item in qube_detail_schedule(url, source, visible_text))
         links, external = discovery_links(
             parser, url, source.get("sourceType") == "discovery"
         )
@@ -878,6 +907,15 @@ def collect_source(source, fetcher, checked_at):
             status.update(
                 {"status": "error", "message": "页面返回 HTTP " + str(result["status"])}
             )
+            return status, []
+        if source.get("documentType") == "floorplan-pdf":
+            document = result.get("pdf", b"")
+            if not document.startswith(b"%PDF-") or b"%%EOF" not in document[-2048:]:
+                status.update(status="error", message="本届官方展位图未返回完整 PDF。")
+                return status, []
+            status.update(status="manual_review", documentSha256=hashlib.sha256(document).hexdigest(),
+                          documentBytes=len(document), mediaType="application/pdf",
+                          message="已读取主办方链接的本届展位图，展位图不作为独立会期依据。")
             return status, []
         records, links, hints, failures, external = page_records(
             result, source, checked_at

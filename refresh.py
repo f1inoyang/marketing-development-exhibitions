@@ -42,7 +42,7 @@ CODES = dict(pair.split(':', 1) for pair in (
 ).split('|'))
 EXTRA_PLACES = {
     "asia": "JP/Japan/日本|KR/South Korea/韩国|ID/Indonesia/印度尼西亚|MY/Malaysia/马来西亚|PK/Pakistan/巴基斯坦|BD/Bangladesh/孟加拉国|SA/Saudi Arabia/沙特阿拉伯|QA/Qatar/卡塔尔|BH/Bahrain/巴林|OM/Oman/阿曼|KW/Kuwait/科威特|KZ/Kazakhstan/哈萨克斯坦|IL/Israel/以色列|LK/Sri Lanka/斯里兰卡|HK/Hong Kong/中国香港|TW/Taiwan/中国台湾",
-    "europe": "SE/Sweden/瑞典|NO/Norway/挪威|FI/Finland/芬兰|DK/Denmark/丹麦|IE/Ireland/爱尔兰|CZ/Czechia/捷克|GR/Greece/希腊|HU/Hungary/匈牙利|HR/Croatia/克罗地亚|LT/Lithuania/立陶宛|EE/Estonia/爱沙尼亚|LU/Luxembourg/卢森堡|RS/Serbia/塞尔维亚",
+    "europe": "SE/Sweden/瑞典|NO/Norway/挪威|FI/Finland/芬兰|DK/Denmark/丹麦|IE/Ireland/爱尔兰|CZ/Czechia/捷克|GR/Greece/希腊|HU/Hungary/匈牙利|HR/Croatia/克罗地亚|LT/Lithuania/立陶宛|EE/Estonia/爱沙尼亚|MT/Malta/马耳他|CY/Cyprus/塞浦路斯|LU/Luxembourg/卢森堡|RS/Serbia/塞尔维亚",
     "africa": "GH/Ghana/加纳|RW/Rwanda/卢旺达|SN/Senegal/塞内加尔|UG/Uganda/乌干达|CI/Côte d’Ivoire/科特迪瓦|MU/Mauritius/毛里求斯|TN/Tunisia/突尼斯|AO/Angola/安哥拉",
     "south-america": "PE/Peru/秘鲁|UY/Uruguay/乌拉圭|EC/Ecuador/厄瓜多尔|PY/Paraguay/巴拉圭",
     "north-america": "CA/Canada/加拿大|PA/Panama/巴拿马|CR/Costa Rica/哥斯达黎加|DO/Dominican Republic/多米尼加|JM/Jamaica/牙买加",
@@ -59,7 +59,7 @@ COUNTRY_ZONE = {
     "Morocco":"Africa/Casablanca","Netherlands":"Europe/Amsterdam","Nigeria":"Africa/Lagos",
     "Philippines":"Asia/Manila","Poland":"Europe/Warsaw","Romania":"Europe/Bucharest",
     "Rwanda":"Africa/Kigali","Singapore":"Asia/Singapore","South Africa":"Africa/Johannesburg",
-    "Switzerland":"Europe/Zurich","Tanzania":"Africa/Dar_es_Salaam","Thailand":"Asia/Bangkok",
+    "Malta":"Europe/Malta","Cyprus":"Asia/Nicosia","Switzerland":"Europe/Zurich","Tanzania":"Africa/Dar_es_Salaam","Thailand":"Asia/Bangkok",
     "United Arab Emirates":"Asia/Dubai","United Kingdom":"Europe/London","Vietnam":"Asia/Ho_Chi_Minh",
     "Japan":"Asia/Tokyo","South Korea":"Asia/Seoul","Malaysia":"Asia/Kuala_Lumpur",
     "Saudi Arabia":"Asia/Riyadh","Qatar":"Asia/Qatar","Bahrain":"Asia/Bahrain","Oman":"Asia/Muscat",

@@ -90,17 +90,18 @@
     },
     {
       "id": "source-v-solana-breakpoint-2026",
-      "name": "Solana Breakpoint区块链大会",
-      "nameEn": "Solana Breakpoint 2026",
-      "url": "https://solana.com/uk/news/breakpoint-2026-london-speakers",
-      "region": "europe",
+      "name": "Solana Breakpoint 2027",
+      "nameEn": "Solana Breakpoint 2027",
+      "url": "https://luma.com/solana-breakpoint-2027",
+      "region": "north-america",
       "topics": [
         "digital-currency",
         "fintech"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-live-africa-tech-2026",
@@ -148,7 +149,7 @@
       "id": "source-v-the-point-payments-nz-2026",
       "name": "新西兰支付行业大会",
       "nameEn": "The Point 2026 — Payments NZ",
-      "url": "https://thepoint2026.paymentsnz.co.nz/",
+      "url": "https://www.paymentsnz.co.nz/",
       "region": "oceania",
       "topics": [
         "banking",
@@ -156,7 +157,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-papss-cowry-2026",
@@ -315,7 +317,7 @@
       "id": "source-v-digital-assets-forum-london-2027",
       "name": "伦敦数字资产论坛",
       "nameEn": "Digital Assets Forum London 2027",
-      "url": "https://eblockchainconvention.com/digital-assets-forum/",
+      "url": "https://www.tickettailor.com/events/europeanblockchainconvention/2031272",
       "region": "europe",
       "topics": [
         "banking",
@@ -324,7 +326,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-paris-packaging-week-2027",
@@ -531,14 +534,14 @@
       "id": "source-v-andina-link-2027",
       "name": "哥伦比亚Andina Link通信展",
       "nameEn": "Andina Link Expo 2027",
-      "url": "https://latinexpo.andinalink.com/",
+      "url": "https://andinalink.com/",
       "region": "south-america",
       "topics": [
         "telecom"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22"
     },
     {
       "id": "source-v-capacity-latam-2027",
@@ -571,14 +574,14 @@
       "id": "source-v-propak-vietnam-2027",
       "name": "越南国际加工与包装展",
       "nameEn": "ProPak Vietnam 2027",
-      "url": "https://www.propakvietnam.com/thong-tin-chung-copy-en/",
+      "url": "https://www.propakvietnam.com/en/",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-04"
+      "reviewedAt": "2026-11-22"
     },
     {
       "id": "source-v-appex-2027",
@@ -638,7 +641,7 @@
       "id": "source-v-afr-banking-summit-2027",
       "name": "澳大利亚金融评论银行峰会",
       "nameEn": "Financial Review Banking Summit 2027",
-      "url": "https://live.afr.com/bankingsummit/",
+      "url": "https://www.afr.com/afrlive/banking-summit",
       "region": "oceania",
       "topics": [
         "banking",
@@ -646,7 +649,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-afripack-tanzania-2027",
@@ -1103,7 +1107,14 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-22",
+      "programmeLocation": {
+        "city": "Johannesburg",
+        "country": "South Africa",
+        "printedCountry": "South Africa",
+        "heading": "Africa Payments & RegTech Forum"
+      },
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-fintech-summit-africa-2027",
@@ -1123,9 +1134,9 @@
     },
     {
       "id": "source-nov13-crosstech-world",
-      "name": "CrossTech 全球跨境支付大会",
-      "nameEn": "CrossTech World 2026",
-      "url": "https://crosstechpayments.com/crosstech-world-2026/",
+      "name": "迈阿密 CrossTech 金融科技节",
+      "nameEn": "CrossTech Fintech Fest 2027",
+      "url": "https://crosstechpayments.com/fintech-fest-2027/",
       "region": "north-america",
       "topics": [
         "fintech",
@@ -1133,7 +1144,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-13"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-nov13-fintech-revolution-india",
@@ -1153,14 +1165,14 @@
       "id": "source-nov13-loupe-south-china",
       "name": "华南标签与包装印刷展",
       "nameEn": "LOUPE South China 2026",
-      "url": "https://www.loupe-global.com/loupe-mexico",
+      "url": "https://southchina.loupe-asia.com.cn/",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-13"
+      "reviewedAt": "2026-11-22"
     },
     {
       "id": "source-nov13-banktech-us",
@@ -1194,14 +1206,16 @@
       "id": "source-nov13-gulf-print-pack",
       "name": "海湾印刷与包装展",
       "nameEn": "Gulf Print & Pack 2027",
-      "url": "https://www.gulfprintpack.com/",
+      "url": "https://floorplan.live/data/api/events/3556/views/9/pdf-external",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-13"
+      "reviewedAt": "2026-11-22",
+      "documentType": "floorplan-pdf",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-nov13-ism-manufacturing",
@@ -1725,14 +1739,15 @@
       "id": "source-nov18-ofc-2027",
       "name": "OFC 光通信技术大会暨展览会",
       "nameEn": "OFC Conference and Exhibition 2027",
-      "url": "https://www.ofcconference.org/Exhibit-at-OFC",
+      "url": "https://www.laconventioncenter.com/events/detail/ofc-2027",
       "region": "north-america",
       "topics": [
         "telecom"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-18"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-nov18-nab-2027",
@@ -1890,14 +1905,15 @@
       "id": "detail-a6427f8b6ac3",
       "name": "华南标签与包装印刷展",
       "nameEn": "LOUPE South China 2026",
-      "url": "https://www.loupe-southchina.com/travel-information",
+      "url": "https://southchina.loupe-asia.com.cn/exhibitor-list-visitor",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-18"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "detail-624675bb5f98",
@@ -2040,19 +2056,17 @@
     },
     {
       "id": "calendar-cc6a807a1371",
-      "name": "LOUPE Southeast Asia",
-      "nameEn": "LOUPE Southeast Asia",
-      "url": "https://www.loupe-seasia.com/travel-information",
-      "region": "",
+      "name": "LOUPE 东南亚标签与包装印刷展",
+      "nameEn": "LOUPE Southeast Asia 2027",
+      "url": "https://www.propakasia.com/ppka/2026/en/press_dt.asp?id=1047",
+      "region": "asia",
       "topics": [
         "packaging"
       ],
       "enabled": true,
       "official": true,
-      "reviewedAt": "2026-11-18",
-      "sourceType": "discovery",
-      "maxLinkedPages": 10,
-      "partOfEventId": "v-propak-asia-2027"
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
     },
     {
       "id": "faq-live-sff-2026",
@@ -2068,6 +2082,252 @@
       "official": true,
       "enabled": true,
       "reviewedAt": "2026-11-18"
+    },
+    {
+      "name": "阿布扎比私人财富与基金论坛",
+      "nameEn": "Private Wealth & Funds Forum Abu Dhabi 2026",
+      "region": "asia",
+      "topics": [
+        "banking"
+      ],
+      "id": "source-nov22-qwealth",
+      "url": "https://www.qubevents.com/privatewealthandfunds",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Abu Dhabi",
+        "country": "United Arab Emirates",
+        "printedCountry": "UAE",
+        "heading": "Private Wealth & Funds Forum"
+      }
+    },
+    {
+      "name": "马耳他下一代支付与监管科技论坛",
+      "nameEn": "NextGen Payments & RegTech Forum Malta 2027",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "id": "source-nov22-qmalta",
+      "url": "https://www.qubevents.com/nextgen-payments-regtech-malta",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "St. Julians",
+        "country": "Malta",
+        "printedCountry": "Malta",
+        "heading": "NextGen Payments & RegTech Forum"
+      }
+    },
+    {
+      "name": "马耳他数字资产与代币化论坛",
+      "nameEn": "Digital Assets & Tokenisation Forum Malta 2027",
+      "region": "europe",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "id": "source-nov22-qtoken",
+      "url": "https://www.qubevents.com/digital-assets-tokenisation-malta",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "St. Julians",
+        "country": "Malta",
+        "printedCountry": "Malta",
+        "heading": "Digital Assets & Tokenisation Forum"
+      }
+    },
+    {
+      "name": "苏黎世下一代支付与监管科技论坛",
+      "nameEn": "28th NextGen Payments & RegTech Forum Zurich 2027",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "id": "source-nov22-qzur",
+      "url": "https://www.qubevents.com/nextgen-payments-regtech-zurich",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Zurich",
+        "country": "Switzerland",
+        "printedCountry": "Switzerland",
+        "heading": "NextGen Payments & RegTech Forum"
+      }
+    },
+    {
+      "name": "纽约金融创新论坛：支付与监管科技",
+      "nameEn": "5th Financial Innovation Forum New York 2027",
+      "region": "north-america",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "id": "source-nov22-qnew",
+      "url": "https://www.qubevents.com/financial-innovation-forum-new-york",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "New York",
+        "country": "United States",
+        "printedCountry": "USA",
+        "heading": "Financial Innovation Forum"
+      }
+    },
+    {
+      "name": "塞浦路斯外汇科技论坛",
+      "nameEn": "Vision Forex Forum Cyprus 2027",
+      "region": "europe",
+      "topics": [
+        "fintech"
+      ],
+      "id": "source-nov22-qforex",
+      "url": "https://www.qubevents.com/visionforexforum",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Limassol",
+        "country": "Cyprus",
+        "printedCountry": "Cyprus",
+        "heading": "Vision Forex Forum"
+      }
+    },
+    {
+      "name": "巴塞罗那下一代支付与监管科技论坛",
+      "nameEn": "NextGen Payments & RegTech Forum Barcelona 2027",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "id": "source-nov22-qbar",
+      "url": "https://www.qubevents.com/nextgen-payments-regtech-barcelona",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Barcelona",
+        "country": "Spain",
+        "printedCountry": "Spain",
+        "heading": "NextGen Payments & RegTech Forum"
+      }
+    },
+    {
+      "name": "第六届 ICPAC 地中海金融峰会",
+      "nameEn": "6th ICPAC Mediterranean Finance Summit 2027",
+      "region": "europe",
+      "topics": [
+        "fintech"
+      ],
+      "id": "source-nov22-qmed",
+      "url": "https://www.qubevents.com/mediterraneanfinancesummit",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Limassol",
+        "country": "Cyprus",
+        "printedCountry": "Cyprus",
+        "heading": "6th ICPAC Mediterranean"
+      }
+    },
+    {
+      "name": "都柏林下一代支付与监管科技论坛",
+      "nameEn": "NextGen Payments & RegTech Forum Dublin 2027",
+      "region": "europe",
+      "topics": [
+        "fintech",
+        "banking"
+      ],
+      "id": "source-nov22-qdub",
+      "url": "https://www.qubevents.com/nextgen-payments-regtech-dublin",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0,
+      "programmeLocation": {
+        "city": "Dublin",
+        "country": "Ireland",
+        "printedCountry": "Ireland",
+        "heading": "NextGen Payments & RegTech Forum"
+      }
+    },
+    {
+      "name": "阿布扎比数字资产论坛",
+      "nameEn": "Digital Assets Forum Abu Dhabi 2027",
+      "region": "asia",
+      "topics": [
+        "digital-currency",
+        "fintech"
+      ],
+      "id": "source-nov22-daf-abudhabi",
+      "url": "https://www.tickettailor.com/events/europeanblockchainconvention/1645097",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "曼谷东盟造纸与纸包装展",
+      "nameEn": "ASEAN Paper Bangkok 2027",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov22-asean-paper",
+      "url": "https://www.aseanpaperbangkok.com/2027/en/faq.asp",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "墨西哥标签与包装印刷展",
+      "nameEn": "LOUPE Mexico 2027",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov13-loupe-mexico",
+      "url": "https://www.loupe-mexico.com/",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 0
+    },
+    {
+      "id": "calendar-qube-events",
+      "name": "QUBE 金融科技与支付论坛日历",
+      "nameEn": "QUBE Events Calendar",
+      "url": "https://www.qubevents.com/",
+      "region": "",
+      "topics": [
+        "fintech",
+        "banking",
+        "digital-currency"
+      ],
+      "enabled": true,
+      "official": true,
+      "sourceType": "discovery",
+      "reviewedAt": "2026-11-22",
+      "maxLinkedPages": 3
     }
   ]
 }

@@ -18,6 +18,21 @@ class CaptureTests(unittest.TestCase):
     def check(self, content, role=None, url=URL):
         return cap.extract_matches(content,url,EVENT,cap.company_index(DATA),STAMP,expected_roles=[role] if role else [])
 
+    def test_print_directory_requires_the_matching_edition_and_a_booth(self):
+        directory = "OFC 2027\nExhibitor Listing as of 11/22/26\nName           Booth\nExample Chips AG     K-130\nSample Cardiology    W-11, W-12\nHistorical sponsors: Sample Card"
+        names = cap.ofc_directory_names(directory, "2027")
+        matches = cap.published_exhibitor_rows(names,cap.company_index(DATA),URL,STAMP)
+        self.assertEqual([m["name"] for m in matches], ["Example Chips AG"])
+        self.assertEqual(cap.ofc_directory_names(directory,"2026"), [])
+
+    def test_client_directory_is_complete_and_read_as_data(self):
+        page = {"body": '<title>LOUPE Mexico 2027 Exhibitor List</title><link rel="modulepreload" href="/assets/routes-2027.js">Showing 1–1 of 1 exhibitors', "url":URL}
+        fetch = unittest.mock.Mock()
+        fetch.get.return_value = {"status":200, "body":'const list=JSON.parse(`[{"name":"Sample Card","stand":"A10","country":"UK"}]`);'}
+        self.assertEqual(cap.mexico_directory_names(page,fetch,2,None), ["Sample Card"])
+        page["body"]=page["body"].replace("of 1 exhibitors","of 2 exhibitors")
+        self.assertEqual(cap.mexico_directory_names(page,fetch,2,None), [])
+
     def test_compilation_does_not_store_names_and_rejects_ambiguous_aliases(self):
         safe=cap.compile_roster(DATA)
         self.assertNotIn("Example",json.dumps(safe))

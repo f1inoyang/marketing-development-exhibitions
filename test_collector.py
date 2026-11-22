@@ -23,6 +23,20 @@ SOURCE = {
 }
 
 
+class QubeScheduleTests(unittest.TestCase):
+    def test_reads_detail_header_not_the_series_calendar(self):
+        from collector import qube_detail_schedule
+        url = "https://www.qubevents.com/africa-payments"
+        source = dict(url=url,nameEn="Africa Payments & RegTech Forum 2027",
+                      programmeLocation=dict(city="Johannesburg",country="South Africa",
+                          printedCountry="South Africa",heading="Africa Payments & RegTech Forum"))
+        text = "Africa Payments & RegTech Forum 17 JUNE 2027 Marriott Hotel, Johannesburg, South Africa REGISTER HERE"
+        self.assertEqual(qube_detail_schedule(url,source,text)[0]["startDate"],"2027-06-17")
+        self.assertEqual(qube_detail_schedule(url + "-2026",source,text),[])
+        self.assertEqual(qube_detail_schedule(url,source,text.replace("Johannesburg","Cape Town")),[])
+        self.assertEqual(qube_detail_schedule(url,source,text.replace("17 JUNE","31 JUNE")),[])
+
+
 class FakeFetcher:
     def __init__(self, robots):
         self.robots = robots

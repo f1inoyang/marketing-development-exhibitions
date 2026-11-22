@@ -584,6 +584,76 @@ def extract_matches(body, url, event, lookup, checked_at, aliases=(), expected_r
     return list(matches.values()),links,True
 
 
+def published_exhibitor_rows(names, lookup, url, stamp):
+    matches = {}
+    for name in names:
+        found = recognized(name, lookup)
+        if found:
+            cid, relationship, display = found
+            matches[cid] = dict(companyId=cid, name=display, relationship=relationship,
+                                role="exhibitor", sourceUrl=url, checkedAt=stamp[:10])
+    return list(matches.values())
+
+
+def ofc_directory_names(text, year):
+    if not re.search(r"^OFC\s+" + re.escape(year) + r"\s*\n\s*Exhibitor Listing as of", text.lstrip()):
+        return []
+    if not re.search(r"(?m)^\s*Name\s{2,}Booth\s*$", text):
+        return []
+    # Only ordinary directory rows carrying a booth number, never incidental text.
+    return [m[1].strip() for m in re.finditer(
+        r"(?m)^([^\n\r]+?) {2,}[A-Z]-\d+[A-Z]?(?:,\s*[A-Z]-\d+[A-Z]?)*\s*$", text)]
+
+
+def ofc_directory_text(content):
+    import subprocess
+    import shutil
+    if not content.startswith(b"%PDF-"):
+        return ""
+    if shutil.which("pdftotext"):
+        try:
+            proc = subprocess.run(["pdftotext", "-layout", "-", "-"], input=content,
+                                  capture_output=True, timeout=25, check=True)
+            return proc.stdout.decode("utf-8", errors="replace")
+        except (subprocess.SubprocessError, OSError):
+            return ""
+    try:
+        from pypdf import PdfReader
+        from pypdf.errors import PdfReadError
+    except ImportError:
+        return ""
+    try:
+        from io import BytesIO
+        pdf = PdfReader(BytesIO(content))
+        return "\n".join(p.extract_text(extraction_mode="layout") for p in pdf.pages[:100])
+    except (PdfReadError, ValueError, OSError):
+        return ""
+
+
+def mexico_directory_names(page, fetcher, delay, rules):
+    markup = page["body"]
+    if not re.search(r"<title>[^<]*LOUPE Mexico 2027 Exhibitor List", markup, re.I):
+        return []
+    asset = re.search(r'<link\b[^>]*\brel="modulepreload"[^>]*\bhref="(/assets/routes-[\w-]+\.js)"', markup)
+    if not asset:
+        return []
+    url = urljoin(page["url"], asset[1])
+    if rules and not rules.can_fetch(collector.USER_AGENT, url):
+        return []
+    bundle = fetcher.get(url, delay=delay, robots=rules)
+    if bundle["status"] != 200:
+        return []
+    data = re.search(r'JSON\.parse\(`(\[\{"name":.*?\])`\)', bundle["body"], re.S)
+    if not data:
+        return []
+    rows = json.loads(data[1])
+    total = re.search(r'Showing\s+1[–-]\d+\s+of\s+(\d+)\s+exhibitors', markup)
+    if (not total or len(rows) != int(total[1]) or not all(isinstance(row, dict) and
+            isinstance(row.get("name"), str) and "stand" in row and "country" in row for row in rows)):
+        return []
+    return [r["name"] for r in rows if r["stand"]]
+
+
 def scan_event_origin(jobs, lookup, stamp, timeout):
     """Fetch each URL once per origin. Process listed editions separately on shared calendars."""
     fetcher = collector.Fetcher(timeout=timeout)
@@ -616,6 +686,15 @@ def scan_event_origin(jobs, lookup, stamp, timeout):
                 if page["status"] in (404,410):
                     result["state"] = "removed"
                     continue
+                if page["status"] == 200 and "exhibitor" in roles:
+                    ofc = (event["id"] == "nov18-ofc-2027" and url == "https://ofc27.mapyourshow.com/8_0/exhibitor/exhibitor-list.cfm?export=pdf")
+                    mexico = (event["id"] == "nov13-loupe-mexico" and url == "https://exhibitor-list.loupe-mexico.com/")
+                    if ofc or mexico:
+                        names = (ofc_directory_names(ofc_directory_text(page.get("pdf", b"")), event["startDate"][:4])
+                                 if ofc else mexico_directory_names(page, fetcher, delay, rules))
+                        if names:
+                            result.update(state="checked", matches=published_exhibitor_rows(names, lookup, url, stamp))
+                        continue
                 if page["status"] != 200 or "html" not in page["headers"].get("content-type","").lower():
                     continue
                 matches, links, dated = extract_matches(page["body"],page["url"],event,lookup,stamp,aliases,roles,inherited)
