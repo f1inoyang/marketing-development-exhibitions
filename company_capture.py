@@ -479,6 +479,23 @@ def trustech_directory(d, event, url):
     return []
 
 
+def embedded_world_exhibitor(body, url, year):
+    """Read the booked company's own record, including its edition and stand."""
+    match = re.search(r'<script\b[^>]*\bid=["\']__NEXT_DATA__["\'][^>]*>(.*?)</script>', body, re.S | re.I)
+    if not match:
+        return ""
+    try:
+        profile = json.loads(match[1])["props"]["pageProps"]["companyData"]
+        if (profile["productnuemeverid"] == "EMBWLD" + year[-2:]
+                and profile["uri"] == urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1]
+                and any(stand.get("boothnumber") for stand in profile["booth"])):
+            name = profile["displayname_company"]
+            return name if isinstance(name, str) else ""
+    except (ValueError, TypeError, KeyError, AttributeError):
+        pass
+    return ""
+
+
 def extract_matches(body, url, event, lookup, checked_at, aliases=(), expected_roles=(), from_dated_link=False):
     d = Directory(body)
     year = event["startDate"][:4]
@@ -490,6 +507,19 @@ def extract_matches(body, url, event, lookup, checked_at, aliases=(), expected_r
             cid, rel, display = value
             matches.setdefault((cid,role), dict(companyId=cid,name=display,relationship=rel,role=role,
                                                 sourceUrl=url,checkedAt=checked_at[:10]))
+    if (event.get("id") == "nov26-embedded-world" and urlsplit(url).hostname == "www.embedded-world.de"
+            and urlsplit(url).path.startswith("/en/exhibitors/")):
+        exhibitor = embedded_world_exhibitor(body, url, year)
+        add(recognized(exhibitor, lookup), "exhibitor")
+        return list(matches.values()), [], bool(exhibitor)
+    if (event.get("id") == "nov26-world-border" and url == f"https://world-border-congress.com/speakers-{year}/"
+            and any(f"{year} Speakers" in n.short() for n in d.nodes if n.tag in ("title", "h1"))):
+        employers = [n for n in d.nodes if n.tag == "strong" and n.parent
+                     and "speaker-desc" in (n.parent.attrs.get("class") or "").split()]
+        for node in employers:
+            employer = node.short().split(" – ", 1)[0]
+            add(recognized(employer, lookup), "speaker")
+        return list(matches.values()), [], bool(employers)
     names = trustech_directory(d,event,url)
     if names:
         dated = True

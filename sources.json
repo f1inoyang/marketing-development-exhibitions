@@ -439,14 +439,15 @@
       "id": "source-v-propak-philippines-2027",
       "name": "菲律宾国际加工与包装展",
       "nameEn": "ProPak Philippines 2027",
-      "url": "https://en.propakchina.com/",
+      "url": "https://www.propakphilippines.com/",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-04"
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-black-swan-india-2027",
@@ -728,7 +729,7 @@
       "id": "source-v-nacha-payments-2027",
       "name": "美国智慧快捷支付大会",
       "nameEn": "Smarter Faster Payments 2027",
-      "url": "https://payments.nacha.org/",
+      "url": "https://www.nacha.org/events/smarter-faster-payments-2027",
       "region": "north-america",
       "topics": [
         "banking",
@@ -736,7 +737,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-04"
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-pack-expo-southeast-2027",
@@ -1045,7 +1047,7 @@
       "id": "source-v-brasil-finance-summit-2027",
       "name": "巴西金融、金融科技与税务峰会",
       "nameEn": "Brasil Finance, Fintech & Tax Summit 2027",
-      "url": "https://brasilfinancesummit.com/",
+      "url": "https://www.martin-summits.com/informa-es-do-evento/brasil-finance-fintech-tax-summit-2027",
       "region": "south-america",
       "topics": [
         "banking",
@@ -1053,7 +1055,8 @@
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-05"
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-v-id4africa-2027",
@@ -1960,14 +1963,15 @@
       "id": "source-nov18-luxe-shanghai",
       "name": "上海国际奢侈品包装展",
       "nameEn": "LUXE PACK Shanghai 2027",
-      "url": "https://www.luxepackshanghai.com/general-information/dates-and-opening-hours/",
+      "url": "https://www.luxepackshanghai.com/en/dates-and-opening-hours",
       "region": "asia",
       "topics": [
         "packaging"
       ],
       "official": true,
       "enabled": true,
-      "reviewedAt": "2026-11-18"
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
     },
     {
       "id": "source-nov18-payments-ca",
@@ -2328,6 +2332,119 @@
       "sourceType": "discovery",
       "reviewedAt": "2026-11-22",
       "maxLinkedPages": 3
+    },
+    {
+      "name": "纽伦堡嵌入式系统展暨大会",
+      "nameEn": "embedded world Exhibition&Conference 2027",
+      "region": "europe",
+      "topics": [
+        "telecom",
+        "identity"
+      ],
+      "id": "source-nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors-products",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "世界边境安全大会暨展览",
+      "nameEn": "World Border Security Congress 2027",
+      "region": "europe",
+      "topics": [
+        "identity"
+      ],
+      "id": "source-nov26-world-border",
+      "url": "https://world-border-congress.com/",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "全球公共交通票务大会暨展览",
+      "nameEn": "Transport Ticketing Global 2027",
+      "region": "europe",
+      "topics": [
+        "fintech"
+      ],
+      "id": "source-nov26-ticketing",
+      "url": "https://www.transport-ticketing.com/become-sponsor-exhibitor",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "美国光纤连接大会暨展览",
+      "nameEn": "Fiber Connect 2027",
+      "region": "north-america",
+      "topics": [
+        "telecom"
+      ],
+      "id": "source-nov26-fiber-connect",
+      "url": "https://fiberconnect.fiberbroadband.org/",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "印尼国际印刷包装展暨标签纸盒展",
+      "nameEn": "Global Printing & Packaging Expo (GPPE) and Label & Carton Box Expo (LCBE) 2027",
+      "region": "asia",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov26-gppe",
+      "url": "https://globalprintpackexpo.com/show-info",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "洛杉矶国际奢侈品包装展",
+      "nameEn": "LUXE PACK Los Angeles 2027",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov26-luxe-la",
+      "url": "https://www.laconventioncenter.com/events/detail/makeup-luxe-pack-in-los-angeles-2027",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "纽约国际奢侈品包装展",
+      "nameEn": "LUXE PACK New York 2027",
+      "region": "north-america",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov26-luxe-ny",
+      "url": "https://www.luxepacknewyork.com/show-details",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
+    },
+    {
+      "name": "巴黎可持续包装特别展",
+      "nameEn": "LUXE PACK – Édition Spéciale 2027",
+      "region": "europe",
+      "topics": [
+        "packaging"
+      ],
+      "id": "source-nov26-luxe-paris",
+      "url": "https://www.editionspeciale-luxepack.com/en/sustainable-and-responsible-packaging-2",
+      "enabled": true,
+      "official": true,
+      "reviewedAt": "2026-11-26",
+      "maxLinkedPages": 0
     }
   ]
 }

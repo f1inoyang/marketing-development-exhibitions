@@ -87,7 +87,7 @@ CITY_ZONES = {
     "Chile":{"America/Santiago":"Santiago"},"Argentina":{"America/Argentina/Buenos_Aires":"Buenos Aires"},
     "China":{"Asia/Hong_Kong":"Hong Kong|Hong Kong SAR","Asia/Macau":"Macao|Macau"},
     "Canada":{"America/Toronto":"Toronto|Montréal|Montreal|Ottawa","America/Vancouver":"Vancouver","America/Edmonton":"Calgary|Edmonton"},
-    "Indonesia":{"Asia/Jakarta":"Jakarta","Asia/Makassar":"Bali|Denpasar"},
+    "Indonesia":{"Asia/Jakarta":"Jakarta|Tangerang|Kabupaten Tangerang","Asia/Makassar":"Bali|Denpasar"},
 }
 FALLBACK_ZONE = "Etc/GMT+12"
 

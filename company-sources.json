@@ -252,6 +252,54 @@
       "editionAliases": [
         "LOUPE Southeast Asia"
       ]
+    },
+    {
+      "eventId": "nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors/emnify-2613923",
+      "role": "exhibitor",
+      "editionAliases": [
+        "embedded world"
+      ]
+    },
+    {
+      "eventId": "nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors/infineon-technologies-ag-2611520",
+      "role": "exhibitor",
+      "editionAliases": [
+        "embedded world"
+      ]
+    },
+    {
+      "eventId": "nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors/nxp-semiconductors-2611406",
+      "role": "exhibitor",
+      "editionAliases": [
+        "embedded world"
+      ]
+    },
+    {
+      "eventId": "nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors/qualcomm-technologies-inc-2621036",
+      "role": "exhibitor",
+      "editionAliases": [
+        "embedded world"
+      ]
+    },
+    {
+      "eventId": "nov26-embedded-world",
+      "url": "https://www.embedded-world.de/en/exhibitors/stmicroelectronics-2610327",
+      "role": "exhibitor",
+      "editionAliases": [
+        "embedded world"
+      ]
+    },
+    {
+      "eventId": "nov26-world-border",
+      "url": "https://world-border-congress.com/speakers-2027/",
+      "role": "speaker",
+      "editionAliases": [
+        "World Border Security Congress"
+      ]
     }
   ]
 }

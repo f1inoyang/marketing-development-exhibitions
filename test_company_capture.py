@@ -18,6 +18,31 @@ class CaptureTests(unittest.TestCase):
     def check(self, content, role=None, url=URL):
         return cap.extract_matches(content,url,EVENT,cap.company_index(DATA),STAMP,expected_roles=[role] if role else [])
 
+    def test_embedded_world_profile_requires_current_edition_and_assigned_stand(self):
+        url = "https://www.embedded-world.de/en/exhibitors/sample-123"
+        profile = dict(productnuemeverid="EMBWLD27", uri="sample-123", displayname_company="Sample Card",
+                       booth=[{"boothnumber":"3-12"}], companydescription="Example Chips is a customer")
+        event = dict(EVENT, id="nov26-embedded-world")
+        def capture(**updates):
+            obj = {"props":{"pageProps":{"companyData":dict(profile, **updates)}}}
+            page = '<script id="__NEXT_DATA__">' + json.dumps(obj) + '</script>'
+            return cap.extract_matches(page, url, event, cap.company_index(DATA), STAMP)[0]
+        self.assertEqual([r["name"] for r in capture()], ["Sample Card"])
+        self.assertEqual(capture(productnuemeverid="EMBWLD26"), [])
+        self.assertEqual(capture(booth=[]), [])
+        self.assertEqual(capture(uri="another-company"), [])
+
+    def test_border_congress_reads_employer_only_on_year_specific_speaker_list(self):
+        event = dict(EVENT, id="nov26-world-border", nameEn="World Border Security Congress 2027")
+        url = "https://world-border-congress.com/speakers-2027/"
+        page = ('<title>2027 Speakers include – World Border Security Congress</title>'
+                '<div class="speaker-desc">Director <strong>Example Chips – Travel</strong></div>'
+                '<aside><strong>Sample Card</strong></aside>')
+        def names(html):
+            return [(r["name"], r["role"]) for r in cap.extract_matches(html, url, event, cap.company_index(DATA), STAMP)[0]]
+        self.assertEqual(names(page), [("Example Chips", "speaker")])
+        self.assertEqual(names(page.replace("2027 Speakers", "2026 Speakers")), [])
+
     def test_print_directory_requires_the_matching_edition_and_a_booth(self):
         directory = "OFC 2027\nExhibitor Listing as of 11/22/26\nName           Booth\nExample Chips AG     K-130\nSample Cardiology    W-11, W-12\nHistorical sponsors: Sample Card"
         names = cap.ofc_directory_names(directory, "2027")
